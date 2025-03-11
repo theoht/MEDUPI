@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     const header = document.querySelector(".header");
     const content = document.querySelector(".content");
-    const minHeight = 80; // Final header height
+    const minHeight = 120; // Final header height
     let headerShrunk = false;
   
     function shrinkHeader() {

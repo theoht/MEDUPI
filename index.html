@@ -7,25 +7,45 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header blurred-bottom">
+    <header class="header">
       <div class="header-content">MEDUPI</div>
-      <!-- Dedicated blur element -->
-      <div class="header-blur"></div>
+      <div class="header-fade"></div>
     </header>
 
     <main class="content">
-      <section class="publications">
-        <h2>Publications</h2>
-        <p>This is the first section of content. Add your information here.</p>
-      </section>
-      <section class="about">
-        <h2>About</h2>
-        <p>This is the second section of content. Add your information here.</p>
-      </section>
-      <section class="contact">
-        <h2>Contact</h2>
-        <p>This is the first section of content. Add your information here.</p>
-      </section>
+      <div class="sections">
+        <!-- Publications Section -->
+        <section class="publications section">
+          <div class="section-sidebar">
+            <h2>Publications</h2>
+          </div>
+          <div class="section-main">
+            <p>This is the first section of content. Add your information here.</p>
+          </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section">
+          <div class="section-sidebar">
+            <h2>About</h2>
+          </div>
+          <div class="section-main">
+            <p>This is the second section of content. Add your information here.</p>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section">
+          <div class="section-sidebar">
+            <h2>Contact</h2>
+          </div>
+          <div class="section-main">
+            <p>This is the first section of content. Add your information here.</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Footer (remains outside the flex expanding sections) -->
       <section class="footer">
         <h2>Footer</h2>
         <p>This is the first section of content. Add your information here.</p>

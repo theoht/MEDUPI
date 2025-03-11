@@ -1,70 +1,120 @@
+/* ---------------- Header Styles ---------------- */
 .header {
-background-color: #3498db;
-color: white;
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-overflow: hidden;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-transition: height 1.5s ease;
-height: 100vh;
-z-index: 10;
+    background-color: #9bc7ec;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* allow overflow so any extra visual (like header-fade) shows */
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: height 1.5s ease;
+    height: 100vh;  /* initially full viewport height */
+    z-index: 10;
 }
 
 .header-content {
-position: relative;
-z-index: 2;
-font-size: 3em;
-padding: 20px;
+    position: relative;
+    z-index: 2;
+    font-size: 4em;
+    padding: 20px;
 }
 
+/* Retaining the header-fade element (adjust as needed) */
+.header-fade {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 15px;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(139,167,32,0) 0%, rgba(255,255,255,1) 100%);
+    pointer-events: none;
+}
+
+/* ---------------- Main Content and Layout ---------------- */
+
+/* The content element is pushed below the fixed header.
+   When the header is full (100vh) the margin-top is 100vh.
+   When the header shrinks (via JS) it becomes 120px, as set by the script.
+   Additionally, we set up a flex column layout so the footer always stays at the bottom. */
 .content {
-margin-top: 100vh;
-padding: 20px;
-}
-
-.section-layout {
-display: flex;
-margin-bottom: 30px;
-background-color: white;
-border-radius: 8px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-overflow: hidden;
-}
-
-.section-label {
-flex: 1;
-background-color: #3498db;
-color: white;
-display: flex;
-justify-content: center;
-align-items: flex-start;
-padding: 20px;
-font-size: 1.5em;
-min-height: 200px;
-}
-
-.section-content {
-flex: 4;
-padding: 20px;
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-}
-
-@media (max-width: 768px) {
-.section-layout {
+    margin-top: 100vh;
+    display: flex;
     flex-direction: column;
+    /* When header shrinks, ensure that the main area spans at least the remaining viewport */
+    min-height: calc(100vh - 120px);
 }
 
-.section-label,
-.section-content {
-    flex: none;
+/* Wrap the three primary sections and let them expand if needed */
+.sections {
+    flex: 1;
+}
+
+/* Each section expands full width */
+.section {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 200px; /* Ensures a minimum height */
+    margin: 0;
 }
+
+/* The sidebar takes 1/5th (20%) of the width */
+.section-sidebar {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
 }
-  
+
+/* The main content takes the remaining width */
+.section-main {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Unique background colors for each section */
+.publications {
+    background-color: #d9f5b8;
+    padding-top: 120px;
+}
+
+.about {
+    background-color:  #f5c3c0;
+}
+
+.contact {
+    background-color: #c1c1f3; /* Light red/pink */
+}
+
+/* Footer layout (not affected by the two-column layout) */
+.footer {
+    background-color: #9bc7ec;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ---------------- Responsive Adjustments ---------------- */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+    }
+    .section-sidebar,
+    .section-main {
+        width: 100%;
+        text-align: center;
+    }
+}
