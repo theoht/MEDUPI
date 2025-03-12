@@ -6,7 +6,7 @@
     <title>MEDUPI</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/pmr0alv.css">
-    <!-- <link rel="stylesheet" href="https://use.typekit.net/pmr0alv.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css">
   </head>
   <body>
     <header class="header">
@@ -22,7 +22,25 @@
             <h2>Publications</h2>
           </div>
           <div class="section-main">
-            <p>This is the first section of content. Add your information here.</p>
+            <div class="glide">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                  <!-- Example carousel items (these will be replaced with images or other content) -->
+                  <li class="glide__slide"><div class="carousel-item"></div></li>
+                  <li class="glide__slide"><div class="carousel-item"></div></li>
+                  <li class="glide__slide"><div class="carousel-item"></div></li>
+                  <li class="glide__slide"><div class="carousel-item"></div></li>
+                  <li class="glide__slide"><div class="carousel-item"></div></li>
+                  <!-- Add more slides as necessary -->
+                </ul>
+              </div>
+        
+              <!-- Glide.js Navigation (Optional) -->
+              <div data-glide-el="controls">
+                <button data-glide-dir="<">Previous</button>
+                <button data-glide-dir=">">Next</button>
+              </div>
+            </div>
           </div>
           <div class="blur-bottom"></div>
         </section>
