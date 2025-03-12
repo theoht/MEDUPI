@@ -148,25 +148,15 @@ document.addEventListener("DOMContentLoaded", () => {
   handleScroll(); // Run on load too
 });
 
-// GLIDEJS
-document.addEventListener('DOMContentLoaded', function () {
-  const glide = new Glide('.glide', {
-    type: 'carousel', // Carousel type, use 'slider' if you want it to behave differently
-    perView: 3, // Show 3 items at a time (you can adjust this based on the size of your container)
-    gap: 20, // Space between items
-    focusAt: 'center', // Focus the center of the carousel
-    autoplay: 3000, // Automatically advance every 3 seconds (optional)
-    keyboard: true, // Enable keyboard navigation
-    breakpoints: {
-      1200: {
-        perView: 2, // Show 2 items on smaller screens
-      },
-      768: {
-        perView: 1, // Show 1 item on small screens
-      }
-    }
+document.addEventListener("DOMContentLoaded", function() {
+  // Initialize the Swiper carousel on the element with class "swiper-container"
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,      // Show 3 slides at a time
+    spaceBetween: 10,      // Gap between slides in pixels
+    loop: true,            // Loop the carousel for continuous scrolling
+    navigation: {
+      nextEl: '.swiper-button-next',  // Next arrow element
+      prevEl: '.swiper-button-prev',  // Previous arrow element
+    },
   });
-
-  glide.mount(); // Mount the carousel
 });
-

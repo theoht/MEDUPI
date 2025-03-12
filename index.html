@@ -3,14 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MEDUPI</title>
+    <title>medupi</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/favicon.png" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/pmr0alv.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   </head>
   <body>
     <header class="header">
-      <div class="header-content">MEDUPI</div>
+      <div class="header-content">medupi</div>
       <div class="blur-bottom"></div>
     </header>
 
@@ -22,26 +24,44 @@
             <h2>Publications</h2>
           </div>
           <div class="section-main">
-            <div class="glide">
-              <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides">
-                  <!-- Example carousel items (these will be replaced with images or other content) -->
-                  <li class="glide__slide"><div class="carousel-item"></div></li>
-                  <li class="glide__slide"><div class="carousel-item"></div></li>
-                  <li class="glide__slide"><div class="carousel-item"></div></li>
-                  <li class="glide__slide"><div class="carousel-item"></div></li>
-                  <li class="glide__slide"><div class="carousel-item"></div></li>
-                  <!-- Add more slides as necessary -->
-                </ul>
+            <!-- Swiper Container -->
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <!-- Each slide holds one image -->
+                <div class="swiper-slide">
+                  <img src="assets/default_cover.jpg" alt="Image 1">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/default_cover.jpg" alt="Image 2">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/default_cover.jpg" alt="Image 3">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/default_cover.jpg" alt="Image 4">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/default_cover.jpg" alt="Image 5">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/default_cover.jpg" alt="Image 6">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/default_cover.jpg" alt="Image 7">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/default_cover.jpg" alt="Image 8">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/default_cover.jpg" alt="Image 9">
+                </div>
               </div>
-        
-              <!-- Glide.js Navigation (Optional) -->
-              <div data-glide-el="controls">
-                <button data-glide-dir="<">Previous</button>
-                <button data-glide-dir=">">Next</button>
-              </div>
+              <!-- Navigation arrows -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
           </div>
+          
           <div class="blur-bottom"></div>
         </section>
 
@@ -74,7 +94,7 @@
         <p>This is the first section of content. Add your information here.</p>
       </section>
     </main>
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
