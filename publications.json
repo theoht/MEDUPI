@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "title": "This is my title",
+        "author": "Author Name",
+        "cover_photo": "assets/photo_name",
+        "content": "content here......................."
+    },
+    {
+        "id": 2,
+        "title": "Another title",
+        "author": "Another Author",
+        "cover_photo": "assets/another_photo_name",
+        "content": "more content here......................."
+    }
+]

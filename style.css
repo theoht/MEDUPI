@@ -21,9 +21,9 @@ html, body {
 body {
     font-family: "neue-haas-unica", sans-serif;
     font-weight: 100;
-    letter-spacing: -0.025em; /* Tracking converted /
-    /font-size: 2.3rem; /* Adjust as needed */
-    /* cursor: url('assets/mouse.png'), auto; */
+    letter-spacing: -0.025em;
+    /* font-size: 2.3rem;  */
+    cursor: url('assets/mouse.png'), auto;
 }
 
 /* ---------------- Header Styles ---------------- */
@@ -46,14 +46,14 @@ body {
 
 .header-content {
     font-family: "oso-serif-variable", sans-serif;
-    font-weight: 600; /* Instead of font-variation-settings /
-    font-stretch: 70%; / If width adjustment is needed /
-    letter-spacing: -0.025em; / Tracking converted to em */
+    font-weight: 600;
+    /* font-stretch: 70%; */
+    /* letter-spacing: -0.025em; */
     position: relative;
     z-index: 2;
     font-size: 2.8em;
     padding: 20px;
-    transition: transform 1.5s ease; /* Add transition for smooth sliding */
+    transition: transform 1.5s ease;
 }
 
 /* ---------------- Main Content and Layout ---------------- */
@@ -64,7 +64,6 @@ body {
     min-height: calc(100vh - 120px);
 }
 
-/* Wrap the three primary sections */
 .sections {
     flex: 1;
     width: 100%;
@@ -81,18 +80,6 @@ body {
     position: relative;
 }
 
-.blur-bottom {
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    width: 100%;
-    height: 30px;
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    z-index: 5;
-    pointer-events: none;
-}
-
 .section-sidebar {
     width: 20%;
     display: flex;
@@ -106,6 +93,8 @@ body {
     display: flex;
     padding: 20px;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     box-sizing: border-box;
     transition: opacity 0.1s ease, transform 0.1s ease;
 }
@@ -113,25 +102,95 @@ body {
 .publications {
     background-color: #d9f5b8;
     padding-top: 20px;
+    height: 700px;
 }
+
+.publications.section {
+    display: flex; 
+    flex-direction: row;
+    min-height: 600px;
+    position: relative;
+}
+
+.publications .section-main {
+    padding: 20px;
+    min-height: 600px;
+}
+
+.contact .section-main {
+    justify-content: flex-start;
+    text-align: left;
+    align-items: flex-start;
+}
+
+.blur-bottom {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 5;
+    pointer-events: none;
+}
+
 
 /* Ensure the carousel fits the section */
 .swiper-container {
-    position: relative; /* <-- Add this */
+    position: relative; 
     width: 100%;
+    max-width: 90%;
     overflow: hidden;
-  }
+    z-index: 1;
+  }  
   
-/* Each slide should scale and display the image nicely */
-.swiper-slide img {
-    width: 100%;           /* Responsive width */
-    height: auto;          /* Maintain aspect ratio */
-    aspect-ratio: 6 / 9;   /* Enforce aspect ratio (optional, helpful) */
-    object-fit: cover;     /* Crop image nicely */
-    max-width: 300px;      /* Maximum width */
-    max-height: 450px;     /* Maximum height */
-    margin: 0 auto;        /* Center images inside the slide */
-    display: block;        /* Eliminate weird inline spacing */
+/* --- Slide Content --- */
+.swiper-slide {
+    width: auto !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+/* --- Carousel Item Container --- */
+.carousel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    width: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* --- Image --- */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 6 / 9;
+    object-fit: cover;
+    max-width: 300px;
+    max-height: 450px;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* border-radius: 8px; */
+}
+
+/* --- Text Caption --- */
+.carousel-caption {
+    margin-top: 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: #333;
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .swiper-button-prev,
@@ -146,51 +205,32 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 2;
+    z-index: 1;
+    background-color: transparent; /* Remove button background */
+    background-size: contain;      /* Fit the image nicely */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;                   /* Customize size */
+    height: 50px;
 }
 
 /* Move prev button to the left edge */
 .swiper-button-prev {
-    left: 0; /* Stick it to the left edge */
+    background-image: url('assets/Arrow_L.png');
+    left : -70px;
 }
 
 /* Move next button to the right edge */
 .swiper-button-next {
-    right: 0; /* Stick it to the right edge */
+    background-image: url('assets/Arrow_R.png');
+    right : -70px;
 }
 
-.glide {
-    width: 100%; /* Full width of the section */
-    overflow: hidden; /* Prevent items from overflowing */
-}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+  border: 1px solid red; /* See where they are */
 
-.glide__track {
-    display: flex;
-    overflow: hidden; /* Hide any overflow content */
-}
-  
-.glide__slides {
-    display: flex;
-    gap: 20px; /* Space between slides */
-    transition: transform 0.3s ease-in-out; /* Smooth scrolling effect */
-}
-  
-.glide__slide {
-    /* Aspect ratio 6:9 (2:3) */
-    height: 0;
-    padding-bottom: 18%;
-    padding-left: 12%; /* Aspect ratio maintained */
-    background-color: #ccc; /* Temporary background color */
-    flex-shrink: 0; /* Prevent shrinking of items */
-    border-radius: 8px; /* Optional: rounded corners */
-}
-  
-.glide__controls button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
 }
 
 .about {
@@ -217,6 +257,6 @@ body {
     .section-sidebar,
     .section-main {
         width: 100%;
-        text-align: center;
+        text-align: left;
     }
 }

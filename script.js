@@ -102,9 +102,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const sections = document.querySelectorAll('.section');
 
-  // Define fade zones (viewport positions)
-  const fadeStart = 80; // Start fading out here (px from top of viewport)
-  const fadeEnd = 60;   // Fully faded out here
+  // Define separate fade zones for sidebar and main
+  const sidebarFadeStart = 80; // Sidebar starts fading here (px from top)
+  const sidebarFadeEnd = 60;    // Sidebar fully faded here
+
+  const mainFadeStart = -140;     // Main content starts fading here
+  const mainFadeEnd = -280;       // Main fully faded here
 
   function handleScroll() {
     sections.forEach(section => {
@@ -117,12 +120,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // --- SIDEBAR FADE ---
       let sidebarOpacity;
-      if (sidebarDistance >= fadeStart) {
+      if (sidebarDistance >= sidebarFadeStart) {
         sidebarOpacity = 1;
-      } else if (sidebarDistance <= fadeEnd) {
+      } else if (sidebarDistance <= sidebarFadeEnd) {
         sidebarOpacity = 0;
       } else {
-        sidebarOpacity = (sidebarDistance - fadeEnd) / (fadeStart - fadeEnd);
+        sidebarOpacity = (sidebarDistance - sidebarFadeEnd) / (sidebarFadeStart - sidebarFadeEnd);
       }
 
       sidebar.style.opacity = sidebarOpacity;
@@ -130,12 +133,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // --- MAIN FADE ---
       let mainOpacity;
-      if (mainDistance >= fadeStart) {
+      if (mainDistance >= mainFadeStart) {
         mainOpacity = 1;
-      } else if (mainDistance <= fadeEnd) {
+      } else if (mainDistance <= mainFadeEnd) {
         mainOpacity = 0;
       } else {
-        mainOpacity = (mainDistance - fadeEnd) / (fadeStart - fadeEnd);
+        mainOpacity = (mainDistance - mainFadeEnd) / (mainFadeStart - mainFadeEnd);
       }
 
       main.style.opacity = mainOpacity;
@@ -148,15 +151,50 @@ document.addEventListener("DOMContentLoaded", () => {
   handleScroll(); // Run on load too
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  // Initialize the Swiper carousel on the element with class "swiper-container"
-  var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3,      // Show 3 slides at a time
-    spaceBetween: 10,      // Gap between slides in pixels
-    loop: true,            // Loop the carousel for continuous scrolling
-    navigation: {
-      nextEl: '.swiper-button-next',  // Next arrow element
-      prevEl: '.swiper-button-prev',  // Previous arrow element
-    },
-  });
+const swiper = new Swiper('.swiper-container', {
+  slidesPerView: 'auto',
+  spaceBetween: 75,     
+  loop: true,   
+  centeredSlides: true,   
+  centeredSlidesBounds: true,     
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
 });
+
+const carouselItems = document.querySelectorAll('.carousel-item');
+carouselItems.forEach(item => {
+    item.addEventListener('click', function () {
+        const publicationId = item.getAttribute('data-id');
+        window.location.href = `/publications/${publicationId}`;
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Get the publication ID from the URL (e.g., /publications/1)
+  const urlParams = new URLSearchParams(window.location.search);
+  const publicationId = parseInt(urlParams.get('id'));
+
+  // Fetch the publications JSON data (this can be a static file or from a server)
+  fetch('publications.json')
+      .then(response => response.json())
+      .then(data => {
+          // Find the publication by ID
+          const publication = data.find(pub => pub.id === publicationId);
+
+          // If the publication is found, populate the page
+          if (publication) {
+              document.getElementById('publication-title').textContent = publication.title;
+              document.getElementById('publication-author').textContent = "By: " + publication.author;
+              document.getElementById('publication-cover-photo').src = publication.cover_photo;
+              document.getElementById('publication-content').textContent = publication.content;
+          } else {
+              document.getElementById('publication-container').innerHTML = "<p>Publication not found.</p>";
+          }
+      })
+      .catch(error => {
+          console.error('Error loading publications data:', error);
+      });
+});
+
