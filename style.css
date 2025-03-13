@@ -24,6 +24,7 @@ body {
     letter-spacing: -0.025em;
     /* font-size: 2.3rem;  */
     cursor: url('assets/mouse.png'), auto;
+    background-color: #9bc7ec;
 }
 
 /* ---------------- Header Styles ---------------- */
@@ -140,7 +141,7 @@ body {
 .swiper-container {
     position: relative; 
     width: 100%;
-    max-width: 90%;
+    max-width: 1200px;
     overflow: hidden;
     z-index: 1;
   }  
@@ -217,13 +218,13 @@ body {
 /* Move prev button to the left edge */
 .swiper-button-prev {
     background-image: url('assets/Arrow_L.png');
-    left : -70px;
+    /* left : -70px; */
 }
 
 /* Move next button to the right edge */
 .swiper-button-next {
     background-image: url('assets/Arrow_R.png');
-    right : -70px;
+    /* right : -10px !important; */
 }
 
 .swiper-button-prev::after,
@@ -249,6 +250,48 @@ body {
     box-sizing: border-box;
     max-height: 120px;
 }
+
+/* ---------------- Publications Page ---------------- */
+.publication-container {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    max-width: 1200px; /* Adjust as needed */
+    margin: 20px auto; /* Center the container horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    align-items: center; /* Center items horizontally within the container */
+  }
+  
+  /* Flexbox for cover and title/author side-by-side */
+  .publication-container > div:not(.content-section) {
+    display: flex;
+    align-items: center; /* Vertically align items in the row */
+  }
+  
+  .cover-section {
+    width: 30%; /* Adjust width of cover section */
+    padding-right: 20px;
+    text-align: center; /* Center the image within its container */
+  }
+  
+  .cover-section img {
+    max-width: 100%; /* Image takes up the full width of its container */
+    height: auto;
+    display: block; /* Remove extra space below image */
+    margin: 0 auto;   /* Center the image horizontally */
+  }
+  
+  .title-author-section {
+    width: 70%; /* Adjust width of title/author section */
+  }
+  
+  .title-author-section h2,
+  .title-author-section p {
+    margin: 0;       /* Reset default margins for better control */
+  }
+  
+
+/* ---------------- Responsive Design ---------------- */
 
 @media (max-width: 768px) {
     .section {

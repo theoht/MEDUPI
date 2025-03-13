@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publication</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Optional, for styling -->
-</head>
-<body>
-
-    <div id="publication-container">
-        <h1 id="publication-title"></h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publication Details</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/pmr0alv.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <div class="publication-container">
+      <div class="cover-section">
+        <img id="cover-image" src="" alt="Cover Photo" />
+      </div>
+      <div class="title-author-section">
+        <h2 id="publication-title"></h2>
         <p id="publication-author"></p>
-        <img id="publication-cover-photo" alt="Cover Photo">
-        <p id="publication-content"></p>
+      </div>
+      <div class="content-section" id="publication-content"></div>
     </div>
-
-    <script src="script.js"></script> <!-- External JS file -->
-</body>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="publications.js"></script>
+  </body>
 </html>

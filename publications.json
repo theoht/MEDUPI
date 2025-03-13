@@ -1,16 +1,72 @@
 [
     {
         "id": 1,
-        "title": "This is my title",
-        "author": "Author Name",
-        "cover_photo": "assets/photo_name",
+        "title": "Mass Traffic",
+        "author": "Lantian Xie & Sabih Ahmed",
+        "cover_photo": "assets/mass_traffic.png",
         "content": "content here......................."
     },
     {
         "id": 2,
         "title": "Another title",
         "author": "Another Author",
-        "cover_photo": "assets/another_photo_name",
+        "cover_photo": "assets/matter_mattering_matters.png",
+        "content": "more content here......................."
+    },
+    {
+        "id": 2,
+        "title": "Mass Traffic",
+        "author": "Lantian Xie & Sabih Ahmed",
+        "cover_photo": "assets/mass_traffic.png",
+        "content": "more content here......................."
+    },
+    {
+        "id": 2,
+        "title": "Another title",
+        "author": "Another Author",
+        "cover_photo": "assets/matter_mattering_matters.png",
+        "content": "more content here......................."
+    },
+    {
+        "id": 2,
+        "title": "Mass Traffic",
+        "author": "Lantian Xie & Sabih Ahmed",
+        "cover_photo": "assets/mass_traffic.png",
+        "content": "more content here......................."
+    },
+    {
+        "id": 1,
+        "title": "This is my title",
+        "author": "Author Name",
+        "cover_photo": "assets/matter_mattering_matters.png",
+        "content": "content here......................."
+    },
+    {
+        "id": 2,
+        "title": "Mass Traffic",
+        "author": "Lantian Xie & Sabih Ahmed",
+        "cover_photo": "assets/mass_traffic.png",
+        "content": "more content here......................."
+    },
+    {
+        "id": 2,
+        "title": "Another title",
+        "author": "Another Author",
+        "cover_photo": "assets/matter_mattering_matters.png",
+        "content": "more content here......................."
+    },
+    {
+        "id": 2,
+        "title": "Mass Traffic",
+        "author": "Lantian Xie & Sabih Ahmed",
+        "cover_photo": "assets/mass_traffic.png",
+        "content": "more content here......................."
+    },
+    {
+        "id": 2,
+        "title": "Another title",
+        "author": "Another Author",
+        "cover_photo": "assets/matter_mattering_matters.png",
         "content": "more content here......................."
     }
 ]

@@ -151,17 +151,65 @@ document.addEventListener("DOMContentLoaded", () => {
   handleScroll(); // Run on load too
 });
 
-const swiper = new Swiper('.swiper-container', {
-  slidesPerView: 'auto',
-  spaceBetween: 75,     
-  loop: true,   
-  centeredSlides: true,   
-  centeredSlidesBounds: true,     
-  navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-  },
+document.addEventListener("DOMContentLoaded", () => {
+  const swiperWrapper = document.getElementById("swiper-wrapper");
+
+  fetch("publications.json")
+    .then((response) => response.json())
+    .then((publications) => {
+      publications.forEach((publication) => {
+        // Create the swiper-slide div
+        const swiperSlide = document.createElement("div");
+        swiperSlide.classList.add("swiper-slide");
+
+        // Create the link (<a>) element
+        const link = document.createElement("a");
+        link.href = `/publications/${publication.id}`;
+        link.classList.add("carousel-item");
+        link.setAttribute("data-id", publication.id);
+
+        // Create the image (<img>) element
+        const img = document.createElement("img");
+        img.src = publication.cover_photo || "assets/default_cover.jpg"; // Use a default image if cover_photo is missing
+        img.alt = "Book Cover";
+
+        // Create the caption (<div>) element
+        const caption = document.createElement("div");
+        caption.classList.add("carousel-caption");
+        caption.textContent = publication.title;
+
+        // Assemble the elements
+        link.appendChild(img);
+        link.appendChild(caption);
+        swiperSlide.appendChild(link);
+        swiperWrapper.appendChild(swiperSlide);
+      });
+
+      // Initialize Swiper after the slides are added
+      const swiper = new Swiper(".swiper-container", {
+        slidesPerView: 3,
+        spaceBetween: 75,
+        loop: true,
+        centeredSlides: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      // Event listener for carousel items (moved here to ensure it's attached after dynamic creation)
+      const carouselItems = document.querySelectorAll(".carousel-item");
+      carouselItems.forEach((item) => {
+        item.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the default link behavior
+          const publicationId = item.getAttribute("data-id");
+          window.location.href = `publications.html?id=${publicationId}`;
+        });
+      });
+    })
+    .catch((error) => console.error("Error fetching publications:", error));
 });
+
 
 const carouselItems = document.querySelectorAll('.carousel-item');
 carouselItems.forEach(item => {
@@ -169,32 +217,5 @@ carouselItems.forEach(item => {
         const publicationId = item.getAttribute('data-id');
         window.location.href = `/publications/${publicationId}`;
     });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-  // Get the publication ID from the URL (e.g., /publications/1)
-  const urlParams = new URLSearchParams(window.location.search);
-  const publicationId = parseInt(urlParams.get('id'));
-
-  // Fetch the publications JSON data (this can be a static file or from a server)
-  fetch('publications.json')
-      .then(response => response.json())
-      .then(data => {
-          // Find the publication by ID
-          const publication = data.find(pub => pub.id === publicationId);
-
-          // If the publication is found, populate the page
-          if (publication) {
-              document.getElementById('publication-title').textContent = publication.title;
-              document.getElementById('publication-author').textContent = "By: " + publication.author;
-              document.getElementById('publication-cover-photo').src = publication.cover_photo;
-              document.getElementById('publication-content').textContent = publication.content;
-          } else {
-              document.getElementById('publication-container').innerHTML = "<p>Publication not found.</p>";
-          }
-      })
-      .catch(error => {
-          console.error('Error loading publications data:', error);
-      });
 });
 
