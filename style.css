@@ -133,16 +133,26 @@ body {
     height: 30px;
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    z-index: 5;
+    z-index: 1;
     pointer-events: none;
 }
 
+.swiper-parent {
+    position: relative;
+    width: 100%;
+    max-width: 1600px; /* Or whatever width you need */
+    margin: 0 auto; /* Center it horizontally */
+    display: flex;
+    justify-content: center; /* Align the container center if necessary */
+    align-items: center;
+    padding: 0 60px; /* Leave space for arrows on each side if you want arrows inline */
+  }
 
 /* Ensure the carousel fits the section */
 .swiper-container {
     position: relative; 
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     overflow: hidden;
     z-index: 1;
   }  
@@ -162,6 +172,8 @@ body {
     align-items: center;
     max-width: 300px;
     width: 100%;
+    text-decoration: none;
+    color: inherit;
     user-select: none;
     -webkit-user-drag: none;
     -moz-user-select: none;
@@ -197,12 +209,8 @@ body {
 
 .swiper-button-prev,
 .swiper-button-next {
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Perfect vertical alignment */
-    width: 40px;    /* Optional: control button size */
-    height: 40px;   /* Optional */
-    background: rgba(255, 255, 255, 0.8); /* Optional: background color */
-    border-radius: 50%; /* Optional: circular buttons */
+    /* top: 50%;  */
+    /* transform: translateY(-50%);  */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -212,8 +220,6 @@ body {
     background-size: contain;      /* Fit the image nicely */
     background-repeat: no-repeat;
     background-position: center;
-    width: 50px;                   /* Customize size */
-    height: 50px;
 }
 
 /* Move prev button to the left edge */
@@ -231,8 +237,6 @@ body {
 .swiper-button-prev::after,
 .swiper-button-next::after {
   display: none;
-  border: 1px solid red; /* See where they are */
-
 }
 
 .about {
@@ -262,7 +266,26 @@ body.publications-page .header {
     align-items: center;
 }
 
-/* Ensure content doesn’t get hidden behind the fixed header */
+/* Style the back button */
+body.publications-page .back-button {
+    position: absolute; /* Position it in the top-left */
+    top: 27px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;  /* Adjust size as needed */
+    height: 25px;
+    cursor: pointer;
+}
+  
+body.publications-page .back-button img {
+    width: 100%;  /* Make the image fit the button */
+    height: auto;
+    object-fit: contain;
+}
+
+/* Ensure content doesnï¿½t get hidden behind the fixed header */
 body.publications-page main {
     background-color: #8296f5;
     margin-top: 400px; /* Push content down so it's visible */
@@ -353,9 +376,20 @@ body.publications-page main {
 /* ---------------- Responsive Design ---------------- */
 
 @media (max-width: 768px) {
+    .publications.section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
     .section {
         flex-direction: column;
+        align-items: stretch;
     }
+    .section-sidebar {
+        width: auto; 
+        align-self: flex-start;
+        /* margin-bottom: 1rem; */
+      }
     .section-sidebar,
     .section-main {
         width: 100%;

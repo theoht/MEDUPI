@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sidebarFadeStart = 80; // Sidebar starts fading here (px from top)
   const sidebarFadeEnd = 60;    // Sidebar fully faded here
 
-  const mainFadeStart = -140;     // Main content starts fading here
+  const mainFadeStart = -180;     // Main content starts fading here
   const mainFadeEnd = -280;       // Main fully faded here
 
   function handleScroll() {
@@ -187,14 +187,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Initialize Swiper after the slides are added
       const swiper = new Swiper(".swiper-container", {
-        slidesPerView: 3,
+        slidesPerView: 'auto',
         spaceBetween: 75,
         loop: true,
-        centeredSlides: true,
+        centeredSlides: false,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
-        },
+        }
       });
 
       // Event listener for carousel items (moved here to ensure it's attached after dynamic creation)
