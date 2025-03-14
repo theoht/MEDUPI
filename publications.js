@@ -1,4 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+
+    //Load header already shrunk
+    document.addEventListener("DOMContentLoaded", function () {
+        const header = document.querySelector(".header");
+        const headerContent = document.querySelector(".header-content");
+
+        if (header) {
+            header.style.height = "80px"; // Keep the header small
+        }
+
+        if (headerContent) {
+            headerContent.style.transform = "translateX(calc(-50vw + 120px))"; // Maintain alignment
+        }
+    });
+
+    
     // Function to extract query parameters from the URL
     function getQueryParam(param) {
       const urlParams = new URLSearchParams(window.location.search);

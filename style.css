@@ -57,6 +57,7 @@ body {
     transition: transform 1.5s ease;
 }
 
+
 /* ---------------- Main Content and Layout ---------------- */
 .content {
     margin-top: 100vh;
@@ -252,27 +253,53 @@ body {
 }
 
 /* ---------------- Publications Page ---------------- */
+
+/* Publications page header (always small) */
+body.publications-page .header {
+    height: 80px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure content doesn’t get hidden behind the fixed header */
+body.publications-page main {
+    background-color: #8296f5;
+    margin-top: 400px; /* Push content down so it's visible */
+}
+
+/* Container for publication layout */
 .publication-container {
+    display: flex; /* Use flexbox for side-by-side layout */
+    max-width: 1200px; /* Adjust as needed */
+    margin: 100px auto;
+    padding: 20px;
+    /*border: 1px solid #ccc;*/
+}
+
+/* Left section takes up 30% of the width */
+.left-section {
+    width: 30%;
+    padding-right: 20px;
+}
+
+/* Right section takes up 70% of the width */
+.right-section {
+    width: 70%;
+    padding-left: 20px;
+}
+
+/* Flex properties for the sections inside right and left */
+.left-section,
+.right-section {
     display: flex;
     flex-direction: column; /* Stack sections vertically */
-    max-width: 1200px; /* Adjust as needed */
-    margin: 20px auto; /* Center the container horizontally */
-    padding: 20px;
-    border: 1px solid #ccc;
-    align-items: center; /* Center items horizontally within the container */
-  }
-  
-  /* Flexbox for cover and title/author side-by-side */
-  .publication-container > div:not(.content-section) {
-    display: flex;
-    align-items: center; /* Vertically align items in the row */
-  }
-  
-  .cover-section {
-    width: 30%; /* Adjust width of cover section */
-    padding-right: 20px;
-    text-align: center; /* Center the image within its container */
-  }
+}
+
+/* Style for the cover section (inside left-section) */
+.cover-section {
+    text-align: center;
+}
   
   .cover-section img {
     max-width: 100%; /* Image takes up the full width of its container */
@@ -280,15 +307,47 @@ body {
     display: block; /* Remove extra space below image */
     margin: 0 auto;   /* Center the image horizontally */
   }
-  
-  .title-author-section {
-    width: 70%; /* Adjust width of title/author section */
-  }
-  
-  .title-author-section h2,
-  .title-author-section p {
-    margin: 0;       /* Reset default margins for better control */
-  }
+
+/* Specs Section (Under Cover Image) */
+.specs-section {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* Styling for the title and author section (inside right-section) */
+.title-author-section h2,
+.title-author-section p {
+    margin: 0;
+}
+
+/* Styling for content section (inside right-section) */
+.content-section {
+    margin-top: 20px;
+}
+
+/* Gallery section */
+.gallery-section {
+    margin-top: 20px;
+}
+
+.gallery-item {
+    margin-bottom: 10px;
+}
+
+/* Styling for title and author */
+/*.title-author-section h2,
+.title-author-section p {
+    margin: 0;
+}
+
+/* Make sure content flows well inside */
+/*.content-section {
+    margin-top: 10px;
+}*/
   
 
 /* ---------------- Responsive Design ---------------- */

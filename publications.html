@@ -10,18 +10,38 @@
     <link rel="stylesheet" href="https://use.typekit.net/pmr0alv.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   </head>
-  <body>
-    <div class="publication-container">
-      <div class="cover-section">
-        <img id="cover-image" src="" alt="Cover Photo" />
-      </div>
-      <div class="title-author-section">
-        <h2 id="publication-title"></h2>
-        <p id="publication-author"></p>
-      </div>
-      <div class="content-section" id="publication-content"></div>
-    </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="publications.js"></script>
-  </body>
+  <body class="publications-page"> <!-- created this class for easier css access-->
+     
+    <!-- Directly include the header -->
+      <!--Possibly think about header as own HTML page-->
+      <header class="header">
+          <div class="header-content">medupi</div>
+          <div class="blur-bottom"></div>
+      </header>
+      <div class="publication-container">
+          <!-- Left side (30%) -->
+          <div class="left-section">
+              <div class="cover-section">
+                  <img id="cover-image" src="" alt="Cover Photo" />
+              </div>
+              <div class="specs-section"></div>
+              <!-- Right side (70%) -->
+          </div>
+              <div class="right-section">
+                  <div class="title-author-section">
+                      <h2 id="publication-title"></h2>
+                      <p id="publication-author"></p>
+                  </div>
+                  <div class="content-section" id="publication-content"></div>
+                  <div class="gallery-section">
+                      <div class="gallery-item">
+                          <!--img id="gallery-image" src="" alt="Cover Photo" /> -->
+                          <!-- figure out how to call gallery image and caption here-->
+                      </div>
+                  </div>
+              </div>
+              </div>
+              <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+              <script src="publications.js"></script>
+</body>
 </html>
