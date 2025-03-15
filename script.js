@@ -215,7 +215,7 @@ const carouselItems = document.querySelectorAll('.carousel-item');
 carouselItems.forEach(item => {
     item.addEventListener('click', function () {
         const publicationId = item.getAttribute('data-id');
-        window.location.href = `/publications/${publicationId}`;
+        window.location.href = `./publications/${publicationId}`;
     });
 });
 
