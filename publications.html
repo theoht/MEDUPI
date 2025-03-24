@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/publications_style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/pmr0alv.css">
-    <!-- Load from CDN, fallback to local -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.5/swiper-bundle.min.css" onerror="this.onerror=null;this.href='/libs/swiper/swiper-bundle.min.css';">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11.2.5/swiper-bundle.min.js" onerror="this.onerror=null;this.src='/libs/swiper/swiper-bundle.min.js';"></script>
   </head>
   <body class="publications-page"> <!-- created this class for easier css access-->
     
@@ -34,31 +31,32 @@
           <a href="#" class="menu-item">Updates</a>
       </div>
     </header>
+  <!-- Wrapper for the entire page -->
+  <div class="pub-wrapper">
+    <!-- Left: Publications List -->
+    <aside class="publications-list">
+      <h3>Publications</h3>
+      <ul id="publication-list">
+        <!-- Populated dynamically from JSON -->
+      </ul>
+    </aside>
 
-
-    <div class="publications.container">
-        <div class="v2left-column">
-          <ol id="publication-list">
-            <!-- Publication links will be inserted here dynamically -->
-          </ol>
-          <img id="line_vert" class="line_vert">
-        </div>
-       
-        <div class="v2right-column">
-          <img id="frontcover" class="frontcover" alt="Front Cover">
-          <div class="gap"></div>
-          <h1 id="publication-title" class="title"></h1>
-          <h2 id="publication-author" class="author"></h2>
-          <div class="gap"></div>
-          <p id="publication-content" class="content"></p>
-          <div class="gap"></div>
-          <img id="spread01" class="spread" alt="Spread 1">
-          <img id="spread02" class="spread" alt="Spread 2">
-          <img id="spread03" class="spread" alt="Spread 3">
-      </div>
+    <!-- Middle: Divider Element -->
+    <div class="divider">
+      <img src="assets/divider.png" alt="Divider" class="divider-img" />
     </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="js/publications.js"></script>
-    
+
+    <!-- Right: Publication Details -->
+    <main class="publication-content">
+      <div class="pub-main__content">
+        <h1 id="publication-title" class="pub-title"></h1>
+        <h2 id="publication-author" class="pub-author"></h2>
+        <p id="publication-content" class="pub-content"></p>
+      </div>
+    </main>
+  </div>
+
+  <!-- JS -->
+  <script src="js/publications.js"></script>
 </body>
 </html>

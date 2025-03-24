@@ -1,5 +1,40 @@
+/* VARIABLES */
+:root {
+  --header-height: 80px;
+  --sidebar-width: 15%;
+  --divider-width: 15px;
+  --main-width: calc(85% - var(--divider-width));
+  --background-color: #8296f5;
+  --sidebar-bg: #8296f5;
+  --primary-color: #333;
+  --highlight-color: #0077cc;
+  --font-family-primary: "Oso Serif VF", serif;
+  --font-family-secondary: Verdana, sans-serif;
+  --spacing: 5px;
+}
 
-/* ---------------- Publications Page ---------------- */
+body,
+html {
+  font-family: var(--font-family-secondary);
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  height: 100%;
+}
+
+a {
+  color: var(--highlight-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
 /* Publications page header (always small) */
 body.publications-page .header {
@@ -7,12 +42,12 @@ body.publications-page .header {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed; /* Make header fixed */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background: #9bc7ec;
-  z-index: 10; /* Ensure it's above content */
+  z-index: 10;
 }
 
 body.publications-page .header-content {
@@ -22,24 +57,22 @@ body.publications-page .header-content {
 }
 
 body.publications-page .home-button {
-  position: absolute; /* Position it in the top-left */
+  position: absolute;
   top: 25px;
-  left: 30px; /* Start 30px from the left */
+  left: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 135px;  /* Logo width */
-  height: 45px;  /* Logo height */
+  width: 135px;
+  height: 45px;
   cursor: pointer;
-  /* Add a left margin to create a 25px gap between the buttons */
-  margin-left: 80px;  /* 45px (back button width) + 25px gap */
+  margin-left: 80px;
 }
 
-/* Style the back button */
 body.publications-page .back-button {
-  position: absolute; /* Position it in the top-left */
+  position: absolute;
   top: 27px;
-  left: 30px; /* Position 30px from the left */
+  left: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +84,7 @@ body.publications-page .back-button {
 body.publications-page .menu-button {
   position: absolute;
   top: 27px;
-  right: 25px; /* 25px from the right edge */
+  right: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,15 +93,14 @@ body.publications-page .menu-button {
   cursor: pointer;
 }
 
-/* Menu items */
 body.publications-page #header-menu {
   display: flex;
   align-items: center;
-  gap: 30px; /* Spacing between menu items */
+  gap: 30px;
   position: absolute;
-  right: 100px; /* 60px + 25px from the right */
+  right: 100px;
   opacity: 0;
-  transform: translateX(20px); /* Start slightly offscreen */
+  transform: translateX(20px);
   transition: opacity 1s ease, transform 1s ease;
 }
 
@@ -80,22 +112,22 @@ body.publications-page #header-menu.show {
 body.publications-page .menu-item {
   font-family: "oso-serif-variable", sans-serif;
   font-weight: 600;
-  color: #333; 
-  letter-spacing: 1px; 
-  text-decoration: none; 
+  color: #333;
+  letter-spacing: 1px;
+  text-decoration: none;
   transition: opacity 0.3s ease-in-out;
-  font-size: 2rem; /* Adjust text size as needed */
-  cursor: pointer; /* Changes cursor to pointer */
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 body.publications-page .menu a:hover {
-  opacity: 0.7; /* Optional: Slight fade on hover */
+  opacity: 0.7;
 }
 
 #burger-icon {
   position: absolute;
-  top: 27px; /* Match other elements */
-  right: 25px; /* Keep 25px from the right edge */
+  top: 27px;
+  right: 25px;
   width: 45px;
   height: 45px;
   display: flex;
@@ -103,209 +135,195 @@ body.publications-page .menu a:hover {
   justify-content: center;
   cursor: pointer;
 }
+
 #burger-icon img {
-  width: 45px;  /* Ensure fixed size */
+  width: 45px;
   height: 45px;
   cursor: pointer;
 }
 
-/* Set background color for the publications page */
-body.publications-page {
-  background-color: #8296f5;
-}
-
-
-
-/* Ensure content doesn’t get hidden behind the fixed header */
-body.publications-page .publication-container {
-  display: flex; /* Use flexbox for side-by-side layout */
-  max-width: 1200px;
-  margin: 120px auto 40px; /* Adjust top margin for fixed header */
-  padding: 20px;
-  /* Use padding instead of margin-top to avoid content being pushed out of view */
-}
-
-/* Left section takes up 30% of the width */
-.left-section {
-  width: 30%;
-  padding-right: 20px;
-}
-
-/* Right section takes up 70% of the width */
-.right-section {
-  width: 70%;
-  padding-left: 20px;
-}
-
-/* Flex properties for the sections inside right and left */
-.left-section,
-.right-section {
+/* ======================= */
+/*      LAYOUT WRAPPER     */
+/* ======================= */
+.pub-wrapper {
   display: flex;
-  flex-direction: column; /* Stack sections vertically */
+  margin-top: var(--header-height);
+  height: calc(100vh - var(--header-height));
 }
 
-/* Style for the cover section (inside left-section) */
-.cover-section {
-  text-align: center;
+/* ======================= */
+/*     LEFT COLUMN         */
+/* ======================= */
+.publications-list {
+  width: var(--sidebar-width);
+  height: 100%;
+  background-color: var(--sidebar-bg);
+  padding: var(--spacing);
+  padding-left: 15px;
+  padding-top: 50px;
+  box-sizing: border-box;
+  overflow-y: auto;
 }
 
-.cover-section img {
-  max-width: 100%; /* Image takes up the full width of its container */
+.publications-list h3 {
+  font-family: var(--font-family-primary);
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing);
+}
+
+/* Updated list item styles */
+#publication-list li {
+  margin-bottom: 10px;
+}
+
+#publication-list li a {
+  display: block;
+  padding: 2px;
+  /* border-radius: 4px; */
+  color: var(--primary-color);
+  /* text-decoration: none; */
+  font-weight: normal;
+  transition: all 0.3s ease;
+}
+
+#publication-list li a:hover {
+  text-decoration: underline;
+}
+
+/* Active/selected link styling */
+#publication-list li a.active {
+  font-weight: bold;
+  text-decoration: underline; /* Optional: keep underline when active */
+}
+
+/* ======================= */
+/*      DIVIDER            */
+/* ======================= */
+.divider {
+  width: var(--divider-width);
+  background-color: transparent;
+  position: relative;
+}
+
+.divider-img {
+  position: fixed;
+  top: 20vh;
+  left: var(--sidebar-width);
+  width: var(--divider-width);
   height: auto;
-  display: block; /* Remove extra space below image */
-  margin: 0 auto;   /* Center the image horizontally */
+  z-index: 5;
 }
 
-#frontcover {
-  cursor: pointer; /* Makes it clear that the cover is interactive */
-  transition: opacity 0.3s ease-in-out; /* Smooth transition effect */
+/* ======================= */
+/*     MAIN CONTENT        */
+/* ======================= */
+.publication-content {
+  width: var(--main-width);
+  height: 100%;
+  padding: var(--spacing);
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+
+  /* NEW: Restrict the content width */
+  max-width: 100%;
 }
 
-/* Specs Section (Under Cover Image) */
-.specs-section {
+.pub-main__content {
   width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cover Image (Top of Content) */
+.pub-frontcover {
+  width: 100%;
+  max-width: 300px; /* limits the size */
+  height: auto;
+
+  margin-bottom: var(--spacing);
+
+  /* Important: Make sure it fits and maintains ratio */
+  object-fit: contain;
+  display: block;
+}
+
+/* Publication Title and Author */
+.pub-title {
+  font-family: var(--font-family-primary);
+  font-size: 2.5rem;
   text-align: center;
-  padding-top: 10px;
-  font-size: 14px;
-  color: #555;
+  margin-bottom: var(--spacing);
 }
 
-
-/* Styling for the title and author section (inside right-section) */
-.title-author-section h2,
-.title-author-section p {
-  margin: 0;
+.pub-author {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: var(--spacing);
 }
 
-/* Styling for content section (inside right-section) */
-.content-section {
-  margin-top: 20px;
+.pub-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: var(--spacing);
 }
 
-/* Styling for the specs section*/
-#publication-specs {
-  text-align: left; /* Left align the text */
-  font-family: 'Verdana', sans-serif; /* Set a clean, readable font */
-  color: #555; /* Set text color */
-  padding: 0; /* Optional: Reset padding */
-  margin: 0; /* Optional: Reset margin */
+/* Spread Images Section */
+.pub-spreads {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing);
+  /* box-sizing: border-box; */
 }
 
-#publication-specs ul {
-  list-style-type: none; /* Remove bullet points */
-  padding-left: 0; /* Remove padding */
+/* Individual Spread Images */
+.pub-spread {
+  width: 85%;
+  max-width: 800px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  max-height: 80vh;
 }
 
-/* #publication-specs li {
-  font-family: 'Arial', sans-serif; 
-  font-size: 14px; 
-  line-height: 1.6; 
-  margin-bottom: 8px; 
-} */
-
-
-#publication-specs li strong {
-  display: none; /* Hides the labels (e.g., "year", "isbn") */
+/* Optional: If pub-spread contains img tags instead of being img tags */
+.pub-spread img {
+  width: 85%;
+  height: auto;
+  object-fit: contain;
 }
 
-/* Gallery section */
-.gallery-section {
-  margin-top: 20px;
+/* ======================= */
+/*      RESPONSIVE         */
+/* ======================= */
+@media screen and (max-width: 768px) {
+  .pub-wrapper {
+    flex-direction: column;
+  }
+
+  .publications-list {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .publication-content {
+    width: 100%;
+  }
 }
-
-#spread01, #spread02, #spread03 {
-  width: 100%; /* Ensures it stretches to the full width of the container */
-  max-width: 100%; /* Prevents it from exceeding its container */
-  height: auto; /* Keeps the aspect ratio */
-  object-fit: cover; /* Ensures it fits nicely */
-}
-
-
-
-/* Styling for title and author */
-/*.title-author-section h2,
-.title-author-section p {
-  margin: 0;
-}
-
-/* Make sure content flows well inside */
-/*.content-section {
-  margin-top: 10px;
-}*/
-
-/* ---------------- Publications Page v2 ---------------- */
-
-.publications-container {
-display: flex;  /* Ensures left and right columns are side by side */
-height: 100vh;  /* Full viewport height */
-}
-
-/* Left Column */
-.v2left-column {
-width: 30%;
-background: #8296f5;
-padding: 20px;
-position: fixed;
-top: 80px; /* Adjust if necessary */
-left: 0;
-bottom: 0;
-overflow-y: auto; /* Allows scrolling if the list is long */
-}
-
-/* Right Column */
-.v2right-column {
-margin-left: 30%; /* Makes space for the fixed left column */
-padding: 40px;
-overflow-y: auto; /* Allows scrolling */
-flex-grow: 1; /* Fills remaining space */
-max-width: 60%; /* Ensures it doesn't stretch too much */
-box-sizing: border-box;
-}
-
-/* Images */
-.v2right-column img {
-max-width: 100%;  /* Ensures images fit within the container */
-height: auto; /* Keeps aspect ratio */
-display: block;
-margin: 0 auto; /* Centers images */
-font-size: 0; /*hides alt text once loaded*/
-}
-
-/* Front Cover */
-.frontcover {
-max-width: 20%; /* Controls front cover size */
-margin: 0 auto; /* Centers it */
-}
-
-/* Title */
-.title {
-font-family: 'Oso Serif VF', serif;
-font-size: 48px;
-font-weight: 600;
-text-align: center;
-
-}
-
-/* Author */
-.author {
-font-size: 24px;
-font-weight: 600;
-text-align: center;
-
-}
-
-/* Content */
-.content {
-font-size: 20px;
-text-align: justify;
-margin-top: 30px;
-line-height: 1.5;
-}
-
-/* Spread Images */
-.spread {
-max-width: 50%; /* Keeps spreads from being too big */
-margin: 30px auto; /* Centers and spaces them */
-}
-
-/* ---------------- Responsive Design ---------------- */

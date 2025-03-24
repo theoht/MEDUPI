@@ -99,59 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-
-  const sections = document.querySelectorAll('.section');
-
-  // Define separate fade zones for sidebar and main
-  const sidebarFadeStart = 80; // Sidebar starts fading here (px from top)
-  const sidebarFadeEnd = 60;    // Sidebar fully faded here
-
-  const mainFadeStart = -180;     // Main content starts fading here
-  const mainFadeEnd = -280;       // Main fully faded here
-
-  function handleScroll() {
-    sections.forEach(section => {
-      const sidebar = section.querySelector('.section-sidebar');
-      const main = section.querySelector('.section-main');
-
-      // Get the top position of each element relative to the viewport
-      const sidebarDistance = sidebar.getBoundingClientRect().top;
-      const mainDistance = main.getBoundingClientRect().top;
-
-      // --- SIDEBAR FADE ---
-      let sidebarOpacity;
-      if (sidebarDistance >= sidebarFadeStart) {
-        sidebarOpacity = 1;
-      } else if (sidebarDistance <= sidebarFadeEnd) {
-        sidebarOpacity = 0;
-      } else {
-        sidebarOpacity = (sidebarDistance - sidebarFadeEnd) / (sidebarFadeStart - sidebarFadeEnd);
-      }
-
-      sidebar.style.opacity = sidebarOpacity;
-
-
-      // --- MAIN FADE ---
-      let mainOpacity;
-      if (mainDistance >= mainFadeStart) {
-        mainOpacity = 1;
-      } else if (mainDistance <= mainFadeEnd) {
-        mainOpacity = 0;
-      } else {
-        mainOpacity = (mainDistance - mainFadeEnd) / (mainFadeStart - mainFadeEnd);
-      }
-
-      main.style.opacity = mainOpacity;
-
-    });
-  }
-
-  // Attach scroll event
-  window.addEventListener('scroll', handleScroll);
-  handleScroll(); // Run on load too
-});
-
-document.addEventListener("DOMContentLoaded", () => {
   const swiperWrapper = document.getElementById("swiper-wrapper");
 
   fetch("publications.json")
