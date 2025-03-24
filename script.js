@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Create the image (<img>) element
         const img = document.createElement("img");
-        img.src = publication.cover_photo || "assets/default_cover.jpg"; // Use a default image if cover_photo is missing
+        img.src = publication.frontcover|| "assets/default_cover.jpg"; // Use a default image if cover_photo is missing
         img.alt = "Book Cover";
 
         // Create the caption (<div>) element
@@ -185,18 +185,21 @@ document.addEventListener("DOMContentLoaded", () => {
         swiperWrapper.appendChild(swiperSlide);
       });
 
-      // Initialize Swiper after the slides are added
-      const swiper = new Swiper(".swiper-container", {
-        slidesPerView: 'auto',
-        spaceBetween: 75,
-        loop: true,
-        centeredSlides: false,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+        // **Check if Swiper is available before initializing**
+        if (typeof Swiper !== "undefined") {
+            const swiper = new Swiper(".swiper-container", {
+                slidesPerView: 'auto',
+                spaceBetween: 75,
+                loop: true,
+                centeredSlides: false,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                }
+            });
+        } else {
+            console.error("Swiper failed to load.");
         }
-      });
-
       // Event listener for carousel items (moved here to ensure it's attached after dynamic creation)
       const carouselItems = document.querySelectorAll(".carousel-item");
       carouselItems.forEach((item) => {
@@ -215,7 +218,9 @@ const carouselItems = document.querySelectorAll('.carousel-item');
 carouselItems.forEach(item => {
     item.addEventListener('click', function () {
         const publicationId = item.getAttribute('data-id');
-        window.location.href = `/publications/${publicationId}`;
+        window.location.href = `./publications/${publicationId}`;
     });
+
+  
 });
 

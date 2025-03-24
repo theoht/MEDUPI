@@ -27,7 +27,19 @@ body {
     background-color: #9bc7ec;
 }
 
+h2 {
+  font-family: "oso-serif-variable", sans-serif;
+  font-weight: 600;
+  /* font-stretch: 70%; */
+  line-height: 90%;
+  position: relative;
+  z-index: 2;
+  font-size: 2.8em;
+  }
+
+
 /* ---------------- Header Styles ---------------- */
+
 .header {
     background-color: #9bc7ec;
     color: rgb(0, 0, 0);
@@ -43,6 +55,8 @@ body {
     transition: height 1.5s ease;
     height: 100vh;
     z-index: 10;
+    /*box-shadow: 0px 0px 40px rgba(155, 199, 236, 1); /* Fully opaque shadow in #9BC7EC */
+    box-shadow: 0 0 0.8rem 0.8rem #9BC7EC
 }
 
 .header-content {
@@ -87,7 +101,7 @@ body {
     display: flex;
     padding: 10px;
     box-sizing: border-box;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    /*transition: opacity 0.3s ease, transform 0.3s ease;*/
 }
 
 .section-main {
@@ -98,13 +112,16 @@ body {
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
-    transition: opacity 0.1s ease, transform 0.1s ease;
+    /*transition: opacity 0.1s ease, transform 0.1s ease;*/
 }
 
 .publications {
     background-color: #d9f5b8;
     padding-top: 20px;
     height: 700px;
+    z-index: 4;
+    box-shadow: 0 0 0.8rem 0.8rem #d9f5b8
+
 }
 
 .publications.section {
@@ -125,17 +142,7 @@ body {
     align-items: flex-start;
 }
 
-.blur-bottom {
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    width: 100%;
-    height: 30px;
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    z-index: 1;
-    pointer-events: none;
-}
+
 
 .swiper-parent {
     position: relative;
@@ -241,20 +248,99 @@ body {
 
 .about {
     background-color: #f5c3c0;
+    z-index: 3;
+    box-shadow: 0 0 0.8rem 0.8rem #f5c3c0
 }
 
 .contact {
     background-color: #c1c1f3;
+    z-index: 2;
+    box-shadow: 0 0 0.8rem 0.8rem #c1c1f3
 }
 
-.footer {
-    background-color: #9bc7ec;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-    max-height: 120px;
+/* ---------------- Footer ---------------- */
+
+footer {
+  background-color: #9bc7ec;
+  padding: 40px 5%;
+  height: 33vh; 
+  display: flex;
+  justify-content: center; /* Center the content properly */
+  margin: 0; /* Remove extra margins */
+  padding: 0; /* Reset padding */
+  width: 100%; /* Ensure it stretches fully */
+  z-index: 9;
+  box-shadow: 0 -0.8rem 0.8rem #9BC7EC;
+  
 }
+
+.footer-container {
+    display: flex;
+  justify-content: space-between; 
+  align-items: flex-end;
+  width: 100%; /* Ensures it takes the full width */
+  max-width: 1200px; /* Optional: Restrict max width if needed */
+  margin: 0 auto; /* Center the container */
+  }
+
+  .footer-left {
+    width: 35%; /* Slightly reduce width to create more middle space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+  }
+  
+  .footer-left .footer-bottom {
+    margin-top: auto; /* Push content to bottom */
+    font-size: 14px;
+    opacity: 0.8;
+    padding-bottom: 20px; /* Adds space from the bottom */
+  }
+  
+  .footer-right {
+    width: 35%; /* Keeps the right section compact */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Aligns everything to the right */
+    height: 100%;
+    margin-left: auto; /* Pushes the right section to the far right */
+  }
+  
+  .footer-right .newsletter {
+    align-self: flex-end; /* Move closer to the right */
+    margin-bottom: auto; /* Push content up */
+  }
+  
+  .social-links {
+    align-self: flex-end; /* Move social links to the right edge */
+    padding-bottom: 20px; /* Adds space from the bottom */
+  }
+  
+  .newsletter input {
+    padding: 8px;
+    margin-right: 5px;
+  }
+  
+  .newsletter button {
+    padding: 8px 12px;
+    background: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .social-links a {
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
 
 /* ---------------- Publications Page ---------------- */
 
@@ -264,40 +350,122 @@ body.publications-page .header {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed; /* Make header fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #9bc7ec;
+    z-index: 10; /* Ensure it's above content */
+}
+
+body.publications-page .header-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+body.publications-page .home-button {
+    position: absolute; /* Position it in the top-left */
+    top: 25px;
+    left: 30px; /* Start 30px from the left */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 135px;  /* Logo width */
+    height: 45px;  /* Logo height */
+    cursor: pointer;
+    /* Add a left margin to create a 25px gap between the buttons */
+    margin-left: 80px;  /* 45px (back button width) + 25px gap */
 }
 
 /* Style the back button */
 body.publications-page .back-button {
     position: absolute; /* Position it in the top-left */
     top: 27px;
-    left: 40px;
+    left: 30px; /* Position 30px from the left */
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 25px;  /* Adjust size as needed */
-    height: 25px;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
 }
-  
-body.publications-page .back-button img {
-    width: 100%;  /* Make the image fit the button */
-    height: auto;
-    object-fit: contain;
+
+body.publications-page .menu-button {
+    position: absolute;
+    top: 27px;
+    right: 25px; /* 25px from the right edge */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
 }
 
-/* Ensure content doesn�t get hidden behind the fixed header */
-body.publications-page main {
+/* Menu items */
+body.publications-page #header-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Spacing between menu items */
+    position: absolute;
+    right: 100px; /* 60px + 25px from the right */
+    opacity: 0;
+    transform: translateX(20px); /* Start slightly offscreen */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+body.publications-page #header-menu.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+body.publications-page .menu-item {
+    font-family: "oso-serif-variable", sans-serif;
+    font-weight: 600;
+    color: #333; 
+    letter-spacing: 1px; 
+    text-decoration: none; 
+    transition: opacity 0.3s ease-in-out;
+    font-size: 2rem; /* Adjust text size as needed */
+    cursor: pointer; /* Changes cursor to pointer */
+}
+
+body.publications-page .menu a:hover {
+    opacity: 0.7; /* Optional: Slight fade on hover */
+}
+
+#burger-icon {
+    position: absolute;
+    top: 27px; /* Match other elements */
+    right: 25px; /* Keep 25px from the right edge */
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#burger-icon img {
+    width: 45px;  /* Ensure fixed size */
+    height: 45px;
+    cursor: pointer;
+}
+
+/* Set background color for the publications page */
+body.publications-page {
     background-color: #8296f5;
-    margin-top: 400px; /* Push content down so it's visible */
 }
 
-/* Container for publication layout */
-.publication-container {
+
+
+/* Ensure content doesn’t get hidden behind the fixed header */
+body.publications-page .publication-container {
     display: flex; /* Use flexbox for side-by-side layout */
-    max-width: 1200px; /* Adjust as needed */
-    margin: 100px auto;
+    max-width: 1200px;
+    margin: 120px auto 40px; /* Adjust top margin for fixed header */
     padding: 20px;
-    /*border: 1px solid #ccc;*/
+    /* Use padding instead of margin-top to avoid content being pushed out of view */
 }
 
 /* Left section takes up 30% of the width */
@@ -331,6 +499,11 @@ body.publications-page main {
     margin: 0 auto;   /* Center the image horizontally */
   }
 
+  #frontcover {
+    cursor: pointer; /* Makes it clear that the cover is interactive */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition effect */
+  }
+
 /* Specs Section (Under Cover Image) */
 .specs-section {
     width: 100%;
@@ -352,14 +525,45 @@ body.publications-page main {
     margin-top: 20px;
 }
 
+/* Styling for the specs section*/
+#publication-specs {
+    text-align: left; /* Left align the text */
+    font-family: 'Verdana', sans-serif; /* Set a clean, readable font */
+    color: #555; /* Set text color */
+    padding: 0; /* Optional: Reset padding */
+    margin: 0; /* Optional: Reset margin */
+  }
+  
+  #publication-specs ul {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0; /* Remove padding */
+  }
+  
+  /* #publication-specs li {
+    font-family: 'Arial', sans-serif; 
+    font-size: 14px; 
+    line-height: 1.6; 
+    margin-bottom: 8px; 
+  } */
+ 
+  
+  #publication-specs li strong {
+    display: none; /* Hides the labels (e.g., "year", "isbn") */
+  }
+
 /* Gallery section */
 .gallery-section {
     margin-top: 20px;
 }
 
-.gallery-item {
-    margin-bottom: 10px;
-}
+#spread01, #spread02, #spread03 {
+    width: 100%; /* Ensures it stretches to the full width of the container */
+    max-width: 100%; /* Prevents it from exceeding its container */
+    height: auto; /* Keeps the aspect ratio */
+    object-fit: cover; /* Ensures it fits nicely */
+  }
+
+
 
 /* Styling for title and author */
 /*.title-author-section h2,
@@ -371,7 +575,81 @@ body.publications-page main {
 /*.content-section {
     margin-top: 10px;
 }*/
+
+/* ---------------- Publications Page v2 ---------------- */
+
+.publications-container {
+  display: flex;  /* Ensures left and right columns are side by side */
+  height: 100vh;  /* Full viewport height */
+}
+
+/* Left Column */
+.v2left-column {
+  width: 30%;
+  background: #8296f5;
+  padding: 20px;
+  position: fixed;
+  top: 80px; /* Adjust if necessary */
+  left: 0;
+  bottom: 0;
+  overflow-y: auto; /* Allows scrolling if the list is long */
+}
+
+/* Right Column */
+.v2right-column {
+  margin-left: 30%; /* Makes space for the fixed left column */
+  padding: 40px;
+  overflow-y: auto; /* Allows scrolling */
+  flex-grow: 1; /* Fills remaining space */
+  max-width: 60%; /* Ensures it doesn't stretch too much */
+  box-sizing: border-box;
+}
+
+/* Images */
+.v2right-column img {
+  max-width: 100%;  /* Ensures images fit within the container */
+  height: auto; /* Keeps aspect ratio */
+  display: block;
+  margin: 0 auto; /* Centers images */
+  font-size: 0; /*hides alt text once loaded*/
+}
+
+/* Front Cover */
+.frontcover {
+  max-width: 20%; /* Controls front cover size */
+  margin: 0 auto; /* Centers it */
+}
+
+/* Title */
+.title {
+  font-family: 'Oso Serif VF', serif;
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
   
+}
+
+/* Author */
+.author {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+ 
+}
+
+/* Content */
+.content {
+  font-size: 20px;
+  text-align: justify;
+  margin-top: 30px;
+  line-height: 1.5;
+}
+
+/* Spread Images */
+.spread {
+  max-width: 50%; /* Keeps spreads from being too big */
+  margin: 30px auto; /* Centers and spaces them */
+}
 
 /* ---------------- Responsive Design ---------------- */
 
