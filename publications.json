@@ -3,8 +3,8 @@
     "id": 1,
     "title": "Mass Traffic",
     "author": "Lantian Xie & Sabih Ahmed",
-    "frontcover": "assets/MT-Frontcover.png",
-    "backcover": "assets/MT-Backcover.png",
+    "frontcover": "assets/MT/MT-Frontcover.png",
+    "backcover": "assets/MT/MT-Backcover.png",
     "content": "Mass Traffic is a kino-political theory of the 21st century. From political fictions to statistical abstractions, the book renders motion as a theoria complex. Concepts take the shape of brawl clouds and images surge as high-heat crispy formulations, reading the contemporary world through exponentiality and exuberance. Congestions of bureaucratic procedures meet the traffic of indeterminate actions—singing, swerving and dispersing across chapters on: organs; culture; the archive Infra-habibi-technics; the exhibitionary supply chain. Lantian Xie is an artist mobilising images, objects, things, things that happen, formulations, swerves, jumps, books, working groups, jazz bands, motorcycles, and parties. Sabih Ahmed is a curator moving between exhibitions, infra-/para-/axial-institutional appearances, archives, pedagogy, and theorisation. Text by Lantian Xie, Sabih Ahmed, Deepak Unnikrishnan, Nabarun Bhattacharya, Supriya Chaudhuri, Santhosh S, Kabelo Malatsie, Aarushi Surana, Aasma Tulika, Kaushal Sapre, Alla Semenovskaya, Hala Ali, et al.",
     "specs": {
       "year" : "2023",
@@ -13,16 +13,16 @@
       "physical" : "Softcover, 165 x 230mm",
       "ISBN" : "978-8-867-49602-0" 
               },
-    "spread01": "assets/MT-Spread-01.png",
-    "spread02": "assets/MT-Spread-02.png",
-    "spread03": "assets/MT-Spread-03.png"
+    "spread01": "assets/MT/MT-Spread-01.png",
+    "spread02": "assets/MT/MT-Spread-02.png",
+    "spread03": "assets/MT/MT-Spread-03.png"
   },
   {
     "id": 2,
     "title": "Matter Mattering Matters: \nA Scienticity Reader",
     "author": "Edited by Kabelo Malatsie & Lantian Xie",
-    "frontcover": "assets/MMM-Frontcover.jpg",
-    "backcover": "assets/MMM-Backcover.png",
+    "frontcover": "assets/MMM/MMM-Frontcover.jpg",
+    "backcover": "assets/MMM/MMM-Backcover.png",
     "content": "A world in abundance poses innumerable claims on the ‘stuff’ of science; observation, calculation, empiricism, verifiability, truth, objectivity—demands that expand in their readings beyond what is containable. Matter Mattering Matters: is a scienticity reader of artistic, philosophical, theoretical moves on the epistemic instruments we spin to intimate the universe—with contributions by  Karen Barad, Simnikiwe Buhlungu, Nolan Oswald Dennis, Rohini Devasher & Sabih Ahmed, Merve Ertufan, Ivana Franke, Jackie Karuti, George Mahashe, sidony o'neal, Raqs Media Collective, Oscar Santillan, Bogosi Sekhukhuni, & Aarti Sunder.",
     "specs": {
       "year" : "2025",
@@ -31,16 +31,16 @@
       "physical" : "Softcover, 140 x 210mm",
       "ISBN" : "978-8-867-49650-1" 
               },
-    "spread01": "assets/MMM-Spread-01.png",
-    "spread02": "assets/MMM-Spread-02.png",
+    "spread01": "assets/MMM/MMM-Spread-01.png",
+    "spread02": "assets/MMM/MMM-Spread-02.png",
     "spread03": ""
   },
     {
       "id": 3,
       "title": "When Dust Settles",
       "author": "Igshaan Adams",
-      "frontcover": "assets/WDS-Frontcover.png",
-      "backcover": "assets/WDS-BCover.png",
+      "frontcover": "assets/WDS/WDS-Frontcover.png",
+      "backcover": "assets/WDS/WDS-BCover.png",
       "content": "Igshaan Adams’ first monograph, published on the occasion of his Standard Bank Young Artist Award 2018, traces his work from 2009, including the making of the travelling award exhibition.\nEach book comes in a unique material cover, sewn by the artist.\nPublished by blank projects and Contemporary Office (SA)",
       "specs": {
         "year" : "2018",
@@ -49,15 +49,15 @@
         "physical" : "Hardcover, 190 x 245mm",
         "ISBN" : "978-0-620-79882-2" 
                 },
-      "spread01": "assets/WDS-Spread-01.png",
-      "spread02": "assets/WDS-Spread-02.png",
-      "spread03": "assets/WDS-Spread-03.png"
+      "spread01": "assets/WDS/WDS-Spread-01.png",
+      "spread02": "assets/WDS/WDS-Spread-02.png",
+      "spread03": "assets/WDS/WDS-Spread-03.png"
     },
   {
     "id": 4,
     "title": "Umlindelo wamaKholwa",
     "author": "Sabelo Mlangeni",
-    "frontcover": "assets/UWK-Frontcover.png",
+    "frontcover": "assets/UWK/UWK-Frontcover.png",
     "backcover":"",
     "content": "A photobook accompanying Mlangeni’s exhibition at Wits Art Museum, Johannesburg, 27 June - 28 October 2018. Curated by Kabelo Malatsie, Umlindelo wamaKholwa features mostly black and white photographs focusing on two South African Zionist church communities.With texts by Joel Cabrita, Lesley Cohen, Kabelo Malatsie, Sabelo Mlangeni, Hlonipha Mokoena and Tamar Garb",
     "specs": {
@@ -67,15 +67,15 @@
       "physical" : "Hardcover, 165 x 240mm",
       "ISBN" : "978-0-620-79786-3" 
               },
-    "spread01": "assets/UWK-Spread-01.png",
-    "spread02": "assets/UWK-Spread-02.png",
+    "spread01": "assets/UWK/UWK-Spread-01.png",
+    "spread02": "assets/UWK/UWK-Spread-02.png",
     "spread03": ""
   },
     {
-        "id": 5,
-        "title": "Matšatši a ...",
+    "id": 5,
+    "title": "Matšatši a ...",
     "author": "Kabelo Malatsie (Editor)",
-    "frontcover": "assets/MA-Frontcover.png",
+    "frontcover": "assets/MA/MA-Frontcover.png",
     "backcover": "",
     "content": "Published by the Emile Stipp Collection on the occasion of the screening 'Matšatši a ...' Johannesburg, 10 September 2017. Curated and edited by Kabelo Malatsie",
     "specs": {
@@ -85,7 +85,7 @@
       "physical" : "Softcover, 148 x 210mm",
       "ISBN" : "" 
               },
-    "spread01": "assets/MA-Spread-01.png",
+    "spread01": "assets/MA/MA-Spread-01.png",
     "spread02": "",
     "spread03": ""
     }
