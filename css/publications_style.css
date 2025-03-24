@@ -1,21 +1,20 @@
 /* VARIABLES */
 :root {
   --header-height: 80px;
-  --sidebar-width: 15%;
-  --divider-width: 15px;
-  --main-width: calc(85% - var(--divider-width));
+  --sidebar-width: 180px;
+  --divider-width: 22px;
+  --main-width: calc(100% - var(--sidebar-width) - var(--divider-width));
   --background-color: #8296f5;
   --sidebar-bg: #8296f5;
   --primary-color: #333;
   --highlight-color: #0077cc;
-  --font-family-primary: "Oso Serif VF", serif;
-  --font-family-secondary: Verdana, sans-serif;
+  --font-family: "neue-haas-unica", sans-serif;
   --spacing: 5px;
 }
 
 body,
 html {
-  font-family: var(--font-family-secondary);
+  font-family: "neue-haas-unica", sans-serif;
   background-color: var(--background-color);
   color: var(--primary-color);
   height: 100%;
@@ -34,6 +33,12 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.text-h3 {
+  font-size: 1.75rem;
+  /* font-weight: normal; */
+  margin-bottom: var(--spacing);
 }
 
 /* Publications page header (always small) */
@@ -110,7 +115,6 @@ body.publications-page #header-menu.show {
 }
 
 body.publications-page .menu-item {
-  font-family: "oso-serif-variable", sans-serif;
   font-weight: 600;
   color: #333;
   letter-spacing: 1px;
@@ -142,18 +146,12 @@ body.publications-page .menu a:hover {
   cursor: pointer;
 }
 
-/* ======================= */
-/*      LAYOUT WRAPPER     */
-/* ======================= */
 .pub-wrapper {
   display: flex;
   margin-top: var(--header-height);
   height: calc(100vh - var(--header-height));
 }
 
-/* ======================= */
-/*     LEFT COLUMN         */
-/* ======================= */
 .publications-list {
   width: var(--sidebar-width);
   height: 100%;
@@ -165,12 +163,6 @@ body.publications-page .menu a:hover {
   overflow-y: auto;
 }
 
-.publications-list h3 {
-  font-family: var(--font-family-primary);
-  font-size: 1.2rem;
-  margin-bottom: var(--spacing);
-}
-
 /* Updated list item styles */
 #publication-list li {
   margin-bottom: 10px;
@@ -179,10 +171,7 @@ body.publications-page .menu a:hover {
 #publication-list li a {
   display: block;
   padding: 2px;
-  /* border-radius: 4px; */
   color: var(--primary-color);
-  /* text-decoration: none; */
-  font-weight: normal;
   transition: all 0.3s ease;
 }
 
@@ -190,15 +179,6 @@ body.publications-page .menu a:hover {
   text-decoration: underline;
 }
 
-/* Active/selected link styling */
-#publication-list li a.active {
-  font-weight: bold;
-  text-decoration: underline; /* Optional: keep underline when active */
-}
-
-/* ======================= */
-/*      DIVIDER            */
-/* ======================= */
 .divider {
   width: var(--divider-width);
   background-color: transparent;
@@ -222,11 +202,12 @@ body.publications-page .menu a:hover {
   height: 100%;
   padding: var(--spacing);
   overflow-y: auto;
-
+  font-size: clamp(0.875rem, 2vw, 1rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  text-align: left;
 
   /* NEW: Restrict the content width */
   max-width: 100%;
@@ -239,7 +220,7 @@ body.publications-page .menu a:hover {
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
 }
 
 /* Cover Image (Top of Content) */
@@ -247,33 +228,28 @@ body.publications-page .menu a:hover {
   width: 100%;
   max-width: 300px; /* limits the size */
   height: auto;
-
   margin-bottom: var(--spacing);
-
-  /* Important: Make sure it fits and maintains ratio */
   object-fit: contain;
   display: block;
 }
 
 /* Publication Title and Author */
 .pub-title {
-  font-family: var(--font-family-primary);
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: var(--spacing);
+  font-size: 3rem;
+  text-align: left;
+  margin: 0;
 }
 
 .pub-author {
-  font-size: 1.5rem;
-  text-align: center;
-  color: #666;
-  margin-bottom: var(--spacing);
+  font-size: 2rem;
+  text-align: left;
+  margin: 0;
 }
 
 .pub-content {
   font-size: 1.1rem;
   line-height: 1.6;
-  text-align: justify;
+  text-align: left;
   margin-bottom: var(--spacing);
 }
 
@@ -282,7 +258,7 @@ body.publications-page .menu a:hover {
   width: 85%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items:center; */
   gap: var(--spacing);
   /* box-sizing: border-box; */
 }
@@ -303,6 +279,20 @@ body.publications-page .menu a:hover {
   height: auto;
   object-fit: contain;
 }
+
+.pub-specs{
+  margin: 0;
+  line-height: normal;
+  text-align: left;
+}
+
+.publication-content img {
+  display: block;
+  margin: 0 auto; /* Centers image horizontally */
+  max-width: 70%; /* Ensures responsiveness */
+  height: auto;
+}
+
 
 /* ======================= */
 /*      RESPONSIVE         */
@@ -325,5 +315,6 @@ body.publications-page .menu a:hover {
 
   .publication-content {
     width: 100%;
+    order: -1;
   }
 }

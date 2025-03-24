@@ -19,12 +19,12 @@ html, body {
 }
 
 body {
-    font-family: "neue-haas-unica", sans-serif;
-    font-weight: 100;
-    letter-spacing: -0.025em;
-    /* font-size: 2.3rem;  */
-    cursor: url('assets/mouse.png'), auto;
-    background-color: #9bc7ec;
+  font-family: "neue-haas-unica", sans-serif;
+  font-weight: 100;
+  letter-spacing: -0.025em;
+  /* font-size: 2.3rem;  */
+  cursor: url('assets/mouse.png'), auto;
+  background-color: #9bc7ec;
 }
 
 h2 {
@@ -147,15 +147,14 @@ h2 {
 .swiper-parent {
     position: relative;
     width: 100%;
-    max-width: 1600px; /* Or whatever width you need */
-    margin: 0 auto; /* Center it horizontally */
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center; /* Align the container center if necessary */
+    justify-content: center;
     align-items: center;
-    padding: 0 60px; /* Leave space for arrows on each side if you want arrows inline */
+    padding: 0 60px;
   }
 
-/* Ensure the carousel fits the section */
 .swiper-container {
     position: relative; 
     width: 100%;
@@ -231,13 +230,13 @@ h2 {
 
 /* Move prev button to the left edge */
 .swiper-button-prev {
-    background-image: url('assets/Arrow_L.png');
+    background-image: url('../assets/Arrow_L.png');
     /* left : -70px; */
 }
 
 /* Move next button to the right edge */
 .swiper-button-next {
-    background-image: url('assets/Arrow_R.png');
+    background-image: url('../assets/Arrow_R.png');
     /* right : -10px !important; */
 }
 
