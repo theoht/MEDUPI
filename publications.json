@@ -4,7 +4,6 @@
     "title": "Mass Traffic",
     "author": "Lantian Xie & Sabih Ahmed",
     "frontcover": "assets/MT/MT-Frontcover.png",
-    "backcover": "assets/MT/MT-Backcover.png",
     "content": "Mass Traffic is a kino-political theory of the 21st century. From political fictions to statistical abstractions, the book renders motion as a theoria complex. Concepts take the shape of brawl clouds and images surge as high-heat crispy formulations, reading the contemporary world through exponentiality and exuberance. Congestions of bureaucratic procedures meet the traffic of indeterminate actions—singing, swerving and dispersing across chapters on: organs; culture; the archive Infra-habibi-technics; the exhibitionary supply chain. Lantian Xie is an artist mobilising images, objects, things, things that happen, formulations, swerves, jumps, books, working groups, jazz bands, motorcycles, and parties. Sabih Ahmed is a curator moving between exhibitions, infra-/para-/axial-institutional appearances, archives, pedagogy, and theorisation. Text by Lantian Xie, Sabih Ahmed, Deepak Unnikrishnan, Nabarun Bhattacharya, Supriya Chaudhuri, Santhosh S, Kabelo Malatsie, Aarushi Surana, Aasma Tulika, Kaushal Sapre, Alla Semenovskaya, Hala Ali, et al.",
     "specs": {
       "year" : "2023",
@@ -13,16 +12,17 @@
       "physical" : "Softcover, 165 x 230mm",
       "ISBN" : "978-8-867-49602-0" 
               },
-    "spread01": "assets/MT/MT-Spread-01.png",
-    "spread02": "assets/MT/MT-Spread-02.png",
-    "spread03": "assets/MT/MT-Spread-03.png"
+    "hero": "assets/MT/MT-Spread01.jpg",
+    "spread01": "assets/MT/MT-Spread02.jpg",
+    "spread02": "assets/MT/MT-Spread03.jpg",
+    "spread03": "assets/MT/MT-Spread04.jpg"
+
   },
   {
     "id": 2,
     "title": "Matter Mattering Matters: \nA Scienticity Reader",
     "author": "Edited by Kabelo Malatsie & Lantian Xie",
-    "frontcover": "assets/MMM/MMM-Frontcover.jpg",
-    "backcover": "assets/MMM/MMM-Backcover.png",
+    "frontcover": "assets/MMM/MMM-Frontcover.png",
     "content": "A world in abundance poses innumerable claims on the ‘stuff’ of science; observation, calculation, empiricism, verifiability, truth, objectivity—demands that expand in their readings beyond what is containable. Matter Mattering Matters: is a scienticity reader of artistic, philosophical, theoretical moves on the epistemic instruments we spin to intimate the universe—with contributions by  Karen Barad, Simnikiwe Buhlungu, Nolan Oswald Dennis, Rohini Devasher & Sabih Ahmed, Merve Ertufan, Ivana Franke, Jackie Karuti, George Mahashe, sidony o'neal, Raqs Media Collective, Oscar Santillan, Bogosi Sekhukhuni, & Aarti Sunder.",
     "specs": {
       "year" : "2025",
@@ -31,16 +31,16 @@
       "physical" : "Softcover, 140 x 210mm",
       "ISBN" : "978-8-867-49650-1" 
               },
-    "spread01": "assets/MMM/MMM-Spread-01.png",
-    "spread02": "assets/MMM/MMM-Spread-02.png",
-    "spread03": ""
+    "hero": "assets/MMM/MMM-Spread01.jpg",
+    "spread01": "assets/MMM/MMM-Spread02.jpg",
+    "spread02": "assets/MMM/MMM-Spread03.jpg",
+    "spread03": "assets/MMM/MMM-Spread04.jpg"
   },
     {
       "id": 3,
       "title": "When Dust Settles",
       "author": "Igshaan Adams",
       "frontcover": "assets/WDS/WDS-Frontcover.png",
-      "backcover": "assets/WDS/WDS-BCover.png",
       "content": "Igshaan Adams’ first monograph, published on the occasion of his Standard Bank Young Artist Award 2018, traces his work from 2009, including the making of the travelling award exhibition.\nEach book comes in a unique material cover, sewn by the artist.\nPublished by blank projects and Contemporary Office (SA)",
       "specs": {
         "year" : "2018",
@@ -49,16 +49,17 @@
         "physical" : "Hardcover, 190 x 245mm",
         "ISBN" : "978-0-620-79882-2" 
                 },
-      "spread01": "assets/WDS/WDS-Spread-01.png",
-      "spread02": "assets/WDS/WDS-Spread-02.png",
-      "spread03": "assets/WDS/WDS-Spread-03.png"
+      "hero": "assets/WDS/WDS-Spread01.jpg",
+      "spread01": "assets/WDS/WDS-Spread02.jpg",
+      "spread02": "assets/WDS/WDS-Spread03.jpg",
+      "spread03": "assets/WDS/WDS-Spread04.jpg"
+      
     },
   {
     "id": 4,
     "title": "Umlindelo wamaKholwa",
     "author": "Sabelo Mlangeni",
     "frontcover": "assets/UWK/UWK-Frontcover.png",
-    "backcover":"",
     "content": "A photobook accompanying Mlangeni’s exhibition at Wits Art Museum, Johannesburg, 27 June - 28 October 2018. Curated by Kabelo Malatsie, Umlindelo wamaKholwa features mostly black and white photographs focusing on two South African Zionist church communities.With texts by Joel Cabrita, Lesley Cohen, Kabelo Malatsie, Sabelo Mlangeni, Hlonipha Mokoena and Tamar Garb",
     "specs": {
       "year" : "2018",
@@ -67,16 +68,16 @@
       "physical" : "Hardcover, 165 x 240mm",
       "ISBN" : "978-0-620-79786-3" 
               },
-    "spread01": "assets/UWK/UWK-Spread-01.png",
-    "spread02": "assets/UWK/UWK-Spread-02.png",
-    "spread03": ""
+    "hero": "assets/UWK/UWK-Spread01.jpg",
+    "spread01": "assets/UWK/UWK-Spread02.jpg",
+    "spread02": "assets/UWK/UWK-Spread03.jpg",
+    "spread03": "assets/UWK/UWK-Spread04.jpg"
   },
     {
     "id": 5,
     "title": "Matšatši a ...",
     "author": "Kabelo Malatsie (Editor)",
     "frontcover": "assets/MA/MA-Frontcover.png",
-    "backcover": "",
     "content": "Published by the Emile Stipp Collection on the occasion of the screening 'Matšatši a ...' Johannesburg, 10 September 2017. Curated and edited by Kabelo Malatsie",
     "specs": {
       "year" : "2017",
@@ -85,8 +86,61 @@
       "physical" : "Softcover, 148 x 210mm",
       "ISBN" : "" 
               },
-    "spread01": "assets/MA/MA-Spread-01.png",
+    "hero": "assets/MA/MA-Spread01.jpg",
+    "spread01": "assets/MA/MA-Spread02.jpg"
+    },
+    {
+    "id": 6,
+    "title": "Autonomy? South African Independent Art Institutions, funding models and its effect on institutional programming",
+    "author": "Kabelo Malatsie (Editor)",
+    "frontcover": "assets/AB/AB-Frontcover.png",
+    "content": "A book of interviews with Ntone Edjabe, Gabi Ngcobo, Sinethemba Twalo, David Koloane, Rangoato Hlasane and Malose Malahlela. Printed by Keleketla! Library",
+    "specs": {
+      "year" : "2019",
+      "language" : "English",
+      "pages" : "105 pages",
+      "physical" : "Softcover",
+      "ISBN" : "" 
+              },
+    "hero": "assets/AB/AB-Spread01.jpg",
+    "spread01": "assets/AB/AB-Spread02.jpg",
     "spread02": "",
     "spread03": ""
-    }
+    },
+    {
+      "id": 7,
+      "title": "VANSA Organising Handbook 2019",
+      "author": "Kabelo Malatsie (Editor)",
+      "frontcover": "assets/VO/VO-Frontcover.png",
+      "content": "The Organising Handbook is taken from a meeting of arts organisers, artists, writers and other cultural creators working within organising in different ways, from different parts of Southern Africa. The meeting was held by the Visual Arts Network of South Africa (VANSA) from 2–5 October 2018.\nThe meeting itself emerged out of a report by VANSA, commissioned by the Ford Foundation Southern Africa in 2016/17. The original report was an in-depth discussion on new forms of arts organising in Southern Africa, the state of arts infrastructure in the region, and a longer discussion of the impact of the history of the region. This publication includes some excerpts from that report and brings these together with thoughts and learnings that emerged out of the organising workshop.",
+      "specs": {
+        "year" : "2019",
+        "language" : "English",
+        "pages" : "",
+        "physical" : "Digital Publication",
+        "ISBN" : "" 
+                },
+      "hero": "assets/VO/VO-Spread01.jpg",
+      "spread01": "assets/VO/VO-Spread02.jpg",
+      "spread02": "assets/VO/VO-Spread03.jpg",
+      "spread03": "assets/VO/VO-Spread04.jpg"
+
+      },
+      {
+        "id": 8,
+        "title": "defunct context: Ambivalence to Important Work",
+        "author": "George Mahashe",
+        "frontcover": "assets/DC/DC-Frontcover.png",
+        "content": "A monograph publication by George Mahashe. It explores the artist book and its assembly as a process of inscribing Mahashe’s archive of practice as a physical dreamscape. As a monograph publication, it emanates out of Mahashe’s practice over the last 15 years, focusing on his current project ‘Pavilion Prototype I and II’. These projects draw from his work as convenor of the Anthropology Museum at Wits University (2018-2019) and his occupation of Iziko Museums of South Africa’s Bertram House Parking lot (2021–).\n Contributions by Simnikiwe Buhlungu, MADEYOULOOK, Oluremi Onabanjo and Sumayya Vally.",
+        "specs": {
+          "year" : "2023",
+          "language" : "English",
+          "pages" : "316 pages",
+          "physical" : "Hardcover, 230x270mm",
+          "ISBN" : "" 
+                  },
+        "hero": "assets/DC/DC-Spread01.jpg",
+        "spread01": "assets/DC/DC-Spread02.jpg",
+        "spread02": "assets/DC/DC-Spread03.jpg"  
+        }
 ]

@@ -8,7 +8,7 @@
   }
 
 html {
-    overflow-y: scroll;
+  overflow-y: scroll;
 }
 
 html, body {
@@ -22,7 +22,6 @@ body {
   font-family: "neue-haas-unica", sans-serif;
   font-weight: 100;
   letter-spacing: -0.025em;
-  top: 0;
   /* font-size: 2.3rem;  */
   cursor: url('assets/mouse.png'), auto;
   background-color: #9bc7ec;
@@ -37,6 +36,7 @@ h2 {
   z-index: 2;
   font-size: 2.8em;
   }
+
 
 /* ---------------- Header Styles ---------------- */
 
@@ -56,6 +56,9 @@ h2 {
   position: relative;
   z-index: 2;
   padding: 20px;
+  font-size: 2.8em;
+  font-family: "oso-serif-variable", sans-serif;
+  font-weight: 600;
 }
 
 .logo {
@@ -63,11 +66,11 @@ h2 {
   height: 50px;
 }
 
+
 /* ---------------- Main Content and Layout ---------------- */
 .content {
-    /* margin-top: 100vh; */
-    padding-top: 80px;
     display: flex;
+    padding-top: 80px;
     flex-direction: column;
     min-height: calc(100vh - 120px);
 }
@@ -89,15 +92,17 @@ h2 {
 }
 
 .section-sidebar {
-    width: 20%;
+  font-family: "oso-serif-variable", sans-serif;
+  font-weight: 600;
+  /* font-stretch: 70%; */
+  line-height: 90%;
+  position: relative;
+  z-index: 2;
+  font-size: 1.4em;
+      width: 20%;
     display: flex;
     padding: 10px;
     box-sizing: border-box;
-}
-
-.sidebar-content {
-  position: sticky;
-  top: 0;
 }
 
 .section-main {
@@ -133,12 +138,6 @@ h2 {
 .publications .section-main {
     padding: 20px;
     min-height: 600px;
-}
-
-.contact .section-main {
-    justify-content: flex-start;
-    text-align: left;
-    align-items: flex-start;
 }
 
 .swiper-parent {
@@ -243,15 +242,58 @@ h2 {
 }
 
 .about {
-    background-color: #f5c3c0;
-    z-index: 3;
-    box-shadow: 0 0 0.8rem 0.8rem #f5c3c0
+  background-color: #c1c1f3;
+  z-index: 3;
+  box-shadow: 0 0 0.8rem 0.8rem #c1c1f3;
+  padding: 20px;
 }
 
-.contact {
-    background-color: #c1c1f3;
-    z-index: 2;
-    box-shadow: 0 0 0.8rem 0.8rem #c1c1f3
+/* New container to stack content properly */
+.about .section-content {
+  display: flex;
+  flex-direction: column; /* Stack children (section-main & social-links) */
+  align-items: center; /* Center align everything */
+  width: 100%;
+}
+
+/* Make columns sit next to each other */
+.about .section-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%; /* Ensure full width */
+}
+
+/* Set width for each column */
+.about .section-main .columnA,
+.about .section-main .columnB {
+  width: 48%;
+}
+
+/* Ensure social links are centered below the columns */
+.about .social-links {
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.about .social-links p a {
+  color: black; /* Make the link black */
+  text-decoration: none; /* Remove underline */
+  padding: 2px 4px; /* Add some padding for better highlight effect */
+  border-radius: 4px; /* Slightly round the edges */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Optional: Change highlight on hover */
+.about .social-links p a:hover {
+  background-color: orange;
 }
 
 /* ---------------- Footer ---------------- */
@@ -280,12 +322,10 @@ footer {
   }
 
   .footer-left {
-    width: 35%; /* Slightly reduce width to create more middle space */
-    display: flex;
-    flex-direction: column;
+    width: 50%; /* Slightly reduce width to create more middle space */
     justify-content: space-between;
     align-items: flex-start;
-    height: 100%;
+    
   }
   
   .footer-left .footer-bottom {
@@ -296,12 +336,7 @@ footer {
   }
   
   .footer-right {
-    width: 35%; /* Keeps the right section compact */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* Aligns everything to the right */
-    height: 100%;
-    margin-left: auto; /* Pushes the right section to the far right */
+    padding: 90px 0;
   }
   
   .footer-right .newsletter {
@@ -326,6 +361,8 @@ footer {
     border: none;
     cursor: pointer;
   }
+
+
   
   .social-links a {
     margin-right: 10px;
@@ -334,10 +371,6 @@ footer {
     font-size: 18px;
   }
   
-  .social-links a:hover {
-    text-decoration: underline;
-  }
-
 @media (max-width: 768px) {
     .publications.section {
         flex-direction: column;

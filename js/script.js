@@ -109,25 +109,3 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", loadLatestPost);
 
 });
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const sidebarContent = document.querySelector('.sidebar-content');
-//   const sidebar = document.querySelector('.section-sidebar');
-
-//   window.addEventListener('scroll', () => {
-//       const sidebarRect = sidebar.getBoundingClientRect();
-//       const sidebarTop = sidebarRect.top;
-//       const sidebarBottom = sidebarRect.bottom;
-
-//       if (sidebarTop < 0 && sidebarBottom > 0) {
-//           sidebarContent.style.position = 'fixed';
-//           sidebarContent.style.top = '0';
-//       } else if (sidebarBottom <= 0) {
-//           sidebarContent.style.position = 'absolute';
-//           sidebarContent.style.top = `${sidebar.offsetHeight - sidebarContent.offsetHeight}px`;
-//       } else {
-//           sidebarContent.style.position = 'relative';
-//           sidebarContent.style.top = '0';
-//       }
-//   });
-// });

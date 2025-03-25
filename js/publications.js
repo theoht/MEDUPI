@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Cover image
     const coverImg = document.createElement("img");
-    coverImg.src = publicationData.frontcover;
+    coverImg.src = publicationData.hero;
     coverImg.alt = `${publicationData.title} Front Cover`;
     coverImg.classList.add("pub-frontcover");
 

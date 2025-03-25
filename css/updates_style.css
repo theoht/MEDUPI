@@ -1,198 +1,198 @@
 /* ---------------- UPDATES ---------------------------*/
 
-  .event-data h3 {
-    font-family: "oso-serif-variable", sans-serif;
-    font-weight: 600;
-    font-stretch: 80%;
-    line-height: 90%;
-    position: relative;
-    z-index: 2;
-    font-size: 1.2em;
-    margin: 10px;
-  }
-  
-  .event-data .schedule {
-    padding: 0 20px;
-  }
-  
-  .event-header{
-    display: flex;
-    margin: 30px;
-  }
-  
-  .container {
-    display: flex; /* Enable flexbox layout */
-    flex-direction: row;
-    width: 100%; /* Ensure it takes the full width of the parent */
-    max-width: 1200px; /* Optional: Set a max width if needed */
-    box-sizing: border-box; /* Include padding in width */
-    justify-content: left;
+.event-data h3 {
+  font-family: "oso-serif-variable", sans-serif;
+  font-weight: 600;
+  font-stretch: 80%;
+  line-height: 90%;
+  position: relative;
+  z-index: 2;
+  font-size: 1.2em;
+  margin: 10px;
+}
+
+.event-data .schedule {
+  padding: 0 20px;
+}
+
+.event-header{
+  display: flex;
+  margin: 30px;
+}
+
+.container {
+  display: flex; /* Enable flexbox layout */
+  flex-direction: row;
+  width: 100%; /* Ensure it takes the full width of the parent */
+  max-width: 1200px; /* Optional: Set a max width if needed */
+  box-sizing: border-box; /* Include padding in width */
+  justify-content: left;
 }
 
 .column2 {
-    width: 50%;
-    background-color: #F5C3C0;
+  width: 50%;
+  background-color: #F5C3C0;
 }
 
 .column2 h2{
-  font-size: clamp(1.5em,4vw,3em);
+font-size: clamp(1.5em,4vw,3em);
 }
 
 .vert-divider {
-    background-color: #F5C3C0;
-    width: 5%;
-    max-height:800px;
+  background-color: #F5C3C0;
+  width: 5%;
+  max-height:800px;
 }
 
 .column3 {
-    width: 30%; /* Ensure this is set correctly */
-    background-color: #F5C3C0;
-    padding: 30px;
+  width: 30%; /* Ensure this is set correctly */
+  background-color: #F5C3C0;
+  padding: 30px;
 }
 
 .image-container {
-  max-width: 1000px; /* Increase max width as needed */
-  max-height: 500px; /* Increase max height as needed */
-  width: 80vw; /* Set to a percentage of the viewport width */
-  height: 40vh; /* Set to a percentage of the viewport height */
-  overflow: hidden; /* Hide overflow */
-  position: relative; /* Position relative for absolute children */
-  margin: 0 auto; /* Center the container */
-  display: flex; /* Use flexbox to align items */
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center items horizontally */
+max-width: 1000px; /* Increase max width as needed */
+max-height: 500px; /* Increase max height as needed */
+width: 80vw; /* Set to a percentage of the viewport width */
+height: 40vh; /* Set to a percentage of the viewport height */
+overflow: hidden; /* Hide overflow */
+position: relative; /* Position relative for absolute children */
+margin: 0 auto; /* Center the container */
+display: flex; /* Use flexbox to align items */
+flex-direction: column; /* Stack children vertically */
+align-items: center; /* Center items horizontally */
 }
 
 .fade-image {
-  width: 100%; /* Make the image fill the container width */
-  height: 100%; /* Make the image fill the container height */
-  object-fit: contain; /* Scale the image to fit without warping */
-  position: relative; /* Change to relative for stacking context */
+width: 100%; /* Make the image fill the container width */
+height: 100%; /* Make the image fill the container height */
+object-fit: contain; /* Scale the image to fit without warping */
+position: relative; /* Change to relative for stacking context */
+opacity: 0; /* Start hidden */
+transition: opacity 0.2s ease; /* Fade transition */
+}
+
+.image-caption {
+text-align: center;
+font-style: italic;
+margin-top: 10px; /* Space between image and caption */
+opacity: 1; /* Ensure caption is visible */
+}
+
+
+
+
+.vert-divider {
+  background-color: #F5C3C0;
+  padding: 50px 0;
+  width: 5%;
+}
+
+.column3 {
+  width: 30%;
+  background-color: #F5C3C0;
+  padding: 30px;
+}
+
+.dropdown-icon {
+  pointer-events: auto; /* Allows clicks only on the icon */
+}
+
+.dropdown-icon-container {
+  pointer-events: auto; /* Allows clicks only on the icon */
+  padding: 25px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.image-container {
+  max-width: 800px;
+  max-height: 400px;
+  width: 20vw; /* 20% of viewport width */
+  height: 20vh; /* 20% of viewport height */
+  overflow: hidden; /* Hide overflow */
+  position: relative; /* Position relative for absolute children */
+  margin: 0 auto; /* Center the container */
+}
+
+.fade-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the container */
+  position: absolute; /* Position absolute for fading effect */
   opacity: 0; /* Start hidden */
-  transition: opacity 0.2s ease; /* Fade transition */
+  transition: opacity 1s ease; /* Fade transition */
 }
 
 .image-caption {
   text-align: center;
   font-style: italic;
   margin-top: 10px; /* Space between image and caption */
-  opacity: 1; /* Ensure caption is visible */
 }
 
+/* Ensure events are structured like a table */
+.event-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
 
+/* Dropdown column (20%) */
+.event-column.dropdown {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 
-  
+/* Event details column (80%) */
+.event-column.details {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Spacing between Date, Venue, Address */
+}
+
+/* Hidden schedule row (starts collapsed) */
+.schedule-row {
+  display: none;
+  width: 80%;
+  margin-left: 20%; /* Aligns with column 2 */
+  padding: 10px;
+  background: #f9f9f9;
+  border-left: 3px solid #333;
+}
+
+/* Dropdown icon animation */
+.dropdown-icon {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) { /* Adjust the max-width as needed */
+  .container {
+      flex-direction: column; /* Stack columns vertically */
+  }
+
   .vert-divider {
-    background-color: #F5C3C0;
-    padding: 50px 0;
-    width: 5%;
+      display: none; /* Hide the vertical divider */
   }
-  
+
+  .column2 {
+      width: 100%; /* Ensure column2 takes full width */
+  }
+
   .column3 {
-    width: 30%;
-    background-color: #F5C3C0;
-    padding: 30px;
+      width: 100%; /* Ensure column3 takes full width */
   }
-  
-  .dropdown-icon {
-    pointer-events: auto; /* Allows clicks only on the icon */
-  }
-  
-  .dropdown-icon-container {
-    pointer-events: auto; /* Allows clicks only on the icon */
-    padding: 25px 0;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  .image-container {
-    max-width: 800px;
-    max-height: 400px;
-    width: 20vw; /* 20% of viewport width */
-    height: 20vh; /* 20% of viewport height */
-    overflow: hidden; /* Hide overflow */
-    position: relative; /* Position relative for absolute children */
-    margin: 0 auto; /* Center the container */
-  }
-
-  .fade-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cover the container */
-    position: absolute; /* Position absolute for fading effect */
-    opacity: 0; /* Start hidden */
-    transition: opacity 1s ease; /* Fade transition */
-  }
-
-  .image-caption {
-    text-align: center;
-    font-style: italic;
-    margin-top: 10px; /* Space between image and caption */
-  }
-
-  /* Ensure events are structured like a table */
-  .event-row {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  /* Dropdown column (20%) */
-  .event-column.dropdown {
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  /* Event details column (80%) */
-  .event-column.details {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    gap: 5px; /* Spacing between Date, Venue, Address */
-  }
-  
-  /* Hidden schedule row (starts collapsed) */
-  .schedule-row {
-    display: none;
-    width: 80%;
-    margin-left: 20%; /* Aligns with column 2 */
-    padding: 10px;
-    background: #f9f9f9;
-    border-left: 3px solid #333;
-  }
-  
-  /* Dropdown icon animation */
-  .dropdown-icon {
-    width: 35px;
-    height: 35px;
-    transition: transform 0.3s ease;
-  }
-  
-  .rotate {
-    transform: rotate(180deg);
-  }
-
-  @media (max-width: 768px) { /* Adjust the max-width as needed */
-    .container {
-        flex-direction: column; /* Stack columns vertically */
-    }
-
-    .vert-divider {
-        display: none; /* Hide the vertical divider */
-    }
-
-    .column2 {
-        width: 100%; /* Ensure column2 takes full width */
-    }
-
-    .column3 {
-        width: 100%; /* Ensure column3 takes full width */
-    }
 }
