@@ -96,9 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("wheel", handleUserScroll, { once: true });
   window.addEventListener("touchstart", handleUserScroll, { once: true });
   window.addEventListener("keydown", handleKeyScroll, { once: true });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
   const swiperWrapper = document.getElementById("swiper-wrapper");
 
   fetch("publications.json")
@@ -159,4 +157,53 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     })
     .catch((error) => console.error("Error fetching publications:", error));
+
+
+
+  fetch("footer.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("footer-container").innerHTML = data)
+      .catch(error => console.error("Error loading footer:", error));
+
+
+ // Fetch and display latest post
+ async function loadLatestPost() {
+  try {
+      const response = await fetch("updates.json"); // Fetch the JSON file
+      const data = await response.json();
+
+      // Ensure there are updates available
+      if (data.updates && data.updates.length > 0) {
+          const latestUpdate = data.updates[0]; // Get the first update
+
+          const latestPostContainer = document.getElementById("latest-post");
+          if (!latestUpdate.title) {
+              latestPostContainer.innerHTML = "<p>Latest update has no title.</p>";
+              return;
+          }
+
+          // Build the HTML structure dynamically
+          let html = `
+              <h2>${latestUpdate.title}</h2>
+              <p>${latestUpdate.copy || "No description available."}</p>
+          `;
+
+          if (latestUpdate.images.length > 0) {
+              html += `<img src="${latestUpdate.images[0]}" alt="Latest update image" style="max-width:100%;">`;
+          }
+
+          html += `<a href="updates.html">Read more</a>`;
+
+          latestPostContainer.innerHTML = html;
+      } else {
+          document.getElementById("latest-post").innerHTML = "<p>No updates found.</p>";
+      }
+  } catch (error) {
+      console.error("Error loading latest update:", error);
+      document.getElementById("latest-post").innerHTML = "<p>Failed to load update.</p>";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", loadLatestPost);
+
 });

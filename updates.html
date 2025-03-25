@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Updates</title>
+        <link rel="icon" type="image/png" href="assets/favicon.png" />
+        <link rel="apple-touch-icon" href="assets/favicon.png" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/updates_style.css" />
+        <link rel="stylesheet" href="https://use.typekit.net/pmr0alv.css">
+        <!-- Load from CDN, fallback to local -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.5/swiper-bundle.min.css" onerror="this.onerror=null;this.href='/libs/swiper/swiper-bundle.min.css';">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.2.5/swiper-bundle.min.js" onerror="this.onerror=null;this.src='/libs/swiper/swiper-bundle.min.js';"></script>
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />-->
+       
+    </head>
+    <body class="updates-page">
+        <div class="container" >
+            <div class="column1"></div>
+    
+            <!-- Column 2: Carousel + Copy -->
+            <div class="column2" id="latest-post">
+                <div class="swiper-container">
+                    <div id="carouselWrapper" class="swiper-wrapper"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                
+                <p id="carouselCaption"></p> <!-- Captions under carousel -->
+                <div id="eventCopy"></div> <!-- Copy below captions -->
+            </div>
+
+            <img class="vert-divider" src="assets/svg/line_vert.svg">
+    
+            <!-- Column 3: Dates -->
+            <div class="column3">
+                <div id="Dates"></div>
+                 
+            </div>
+        </div>
+    
+        <div id="footer-container"></div>
+        <script src="js/updates.js"></script> <!-- Page-specific JavaScript -->
+        <script src="js/script.js"></script>
+    </body>
+    </html>

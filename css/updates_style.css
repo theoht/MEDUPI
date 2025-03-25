@@ -1,0 +1,155 @@
+/* ---------------- UPDATES ---------------------------*/
+
+#Dates {
+    padding: 100px 0;
+  }
+  
+  .event-data h3 {
+    font-family: "oso-serif-variable", sans-serif;
+    font-weight: 600;
+    font-stretch: 80%;
+    line-height: 90%;
+    position: relative;
+    z-index: 2;
+    font-size: 1.2em;
+    margin: 10px;
+  }
+  
+  .event-data .schedule {
+    padding: 0 20px;
+  }
+  
+  .event-header{
+    display: flex;
+    margin: 30px;
+  }
+  
+  .container {
+    display: flex;
+    width: 100vw; /* Full screen width */
+    height: 100vh; /* Full screen height */
+  }
+  
+  .column1 {
+    width: 25%;
+    background-color: #F5C3C0; /* Just for visibility */
+  }
+  
+  .column2 {
+    width: 50%;
+    background-color: #F5C3C0;
+    padding: 30px;
+  }
+  
+  #carouselContainer {
+    width: 100%;  /* Full width of .column2 */
+    height: auto;  /* Maintain aspect ratio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .column2 .swiper-container {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Maintain 16:9 ratio */
+    overflow: hidden;
+    
+  }
+  
+  .column2 .swiper-wrapper {
+    display: flex;
+  }
+  
+  .column2 .swiper-slide {
+    flex: 0 0 100%;  /* Ensures each slide takes full width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .column2 .swiper-slide img {
+    width: 100%;  /* Make image fill slide */
+    height: 100%;
+    object-fit: contain; /* Ensure full image fits without cropping */
+  }
+  
+  .column2 #carouselCaption {
+    font-style: italic;
+    text-align: center;
+  }
+  
+  .column2 .linebreak{
+    padding: 60px;
+  }
+  
+  .vert-divider {
+    background-color: #F5C3C0;
+    padding: 50px 0;
+    width: 5%;
+  }
+  
+  .column3 {
+    width: 30%;
+    background-color: #F5C3C0;
+    padding: 30px;
+  }
+  
+  .dropdown-icon {
+    pointer-events: auto; /* Allows clicks only on the icon */
+  }
+  
+  .dropdown-icon-container {
+    pointer-events: auto; /* Allows clicks only on the icon */
+    padding: 25px 0;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Ensure events are structured like a table */
+  .event-row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Dropdown column (20%) */
+  .event-column.dropdown {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  /* Event details column (80%) */
+  .event-column.details {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Spacing between Date, Venue, Address */
+  }
+  
+  /* Hidden schedule row (starts collapsed) */
+  .schedule-row {
+    display: none;
+    width: 80%;
+    margin-left: 20%; /* Aligns with column 2 */
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 3px solid #333;
+  }
+  
+  /* Dropdown icon animation */
+  .dropdown-icon {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+  }
+  
+  .rotate {
+    transform: rotate(180deg);
+  }

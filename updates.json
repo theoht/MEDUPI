@@ -1,0 +1,86 @@
+{
+    "updates": [
+        {
+            "type": "book-launch",
+            "title": "Matter Mattering Matters: Book Launch",
+            "images": ["assets/updates/MMM-BL-01.jpg", "assets/updates/MMM-BL-02.jpg", "assets/updates/MMM-BL-03.jpg", "assets/updates/MMM-BL-OscarSantillan.jpg", "assets/updates/MMM-BL-GeorgeMahashe.jpg"],
+            "captions": [
+                "Matter Mattering Matters book images, Courtesy of Mousse publishing", 
+                "Matter Mattering Matters book images, Courtesy of Mousse publishing",
+                "Matter Mattering Matters book images, Courtesy of Mousse publishing", 
+                "Monumento visto por delante, Courtesy of Oscar Santillan",
+                "Ditaola, Courtesy of George Mahashe"],
+            "copy": "Science is often seen as a way to measure and define the world—through observation, calculation, and verification. But what happens when these tools reveal more than they can contain? Matter Mattering Matters explores this tension, bringing together artists, philosophers, and theorists who challenge the ways we think about knowledge, truth, and the material world.\n\nMoving across disciplines and registers, the contributions contend with the poetics of quantum mechanics, the politics of planetary observation, and the speculative possibilities of human and more than human cognition. How do we make sense of the universe? How do scientific and creative practices shape the way we see, measure, and interact with the world? \n\nEdited by Kabelo Malatsie & Lantian Xie \n\nWith contributions by Karen Barad, Simnikiwe Buhlungu, Nolan Oswald Dennis, Rohini Devasher & Sabih Ahmed, Merve Ertufan, Ivana Franke, Jackie Karuti, George Mahashe, sidony o'neal, Raqs Media Collective, Oscar Santillan, Bogosi Sekhukhuni, & Aarti Sunder",
+            "valid": "",
+            "dates": [
+                {
+                    "date": "Sat 29 March 2025",
+                    "venue": "Kunstinstituut Melly, Rotterdam",
+                    "address": "Witte de Withstraat 50, 3012 BR Rotterdam, Netherlands",
+                    "schedule": [
+                                    {
+                                    "time": "15h00",
+                                    "events": [
+                                        "Oscar Santillan - *Crumbles of Latin American Astronomy*",
+                                        "\nJackie Karuti - *The reading group: from glossary to garden*",
+                                        "\nNolan Oswald Dennis - *Trouble at the system-ensemble boundary*"
+                                    ]
+                                    },
+                                    {
+                                    "time": "16h40",
+                                    "events": [
+                                        "Chit chat with Kabelo Malatsie, Lantian Xie, Oscar Santillan, Jackie Karuti, Nolan Oswald Dennis, and Simnikiwe Buhlungu"
+                                    ]
+                                    },
+                                    {
+                                    "time": "17h00",
+                                    "events": [
+                                        "Simnikiwe Buhlungu - *SRW Radio Live-ish*"
+                                    ]
+                                    }
+                                ]
+                },
+                {
+                    "date": "Tue 01 April 2025",
+                    "venue": "Ivana Franke Studio, Berlin",
+                    "address": "Stendaler Str. 5, 10559 Berlin",
+                    "schedule": [
+                                    {
+                                    "time": "",
+                                    "events": [
+                                        "A studio gathering to share processes and reflections on the book with Merve Ertufan, Ivana Franke, Kabelo Malatsie & Lantian Xie",
+                                        "\n\nSpace is limited please rsvp at medupipub@gmail.com"
+                                    ]
+                                }
+                            ]
+                },
+                {
+                    "date": "Thu 03 April 2025",
+                    "venue": "Kunsthalle Bern",
+                    "address": "Helvetiapl. 1, 3005 Bern, Switzerland",
+                    "schedule": [
+                                    {
+                                    "time": "18h30",
+                                    "events": [
+                                        "In conversation with Kabelo Malatsie and Rohit Jain"
+                                    ]
+                                }
+                            ]
+                },
+                {
+                    "date": "Thu 01 May 2025",
+                    "venue": "Molalatladi, Johannesburg",
+                    "address": "",
+                    "schedule": [
+                                    {
+                                    "time": "18h30",
+                                    "events": [
+                                        "In conversation with Kabelo Malatsie and Rohit Jain"
+                                    ]
+                                }
+                            ]
+                }
+            ]
+        }
+    ]
+}

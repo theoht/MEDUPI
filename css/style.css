@@ -115,6 +115,10 @@ h2 {
     /*transition: opacity 0.1s ease, transform 0.1s ease;*/
 }
 
+.updates.section{
+  background-color: #F5C3C0;
+}
+
 .publications {
     background-color: #d9f5b8;
     padding-top: 20px;
@@ -230,13 +234,13 @@ h2 {
 
 /* Move prev button to the left edge */
 .swiper-button-prev {
-    background-image: url('../assets/Arrow_L.png');
+    background-image: url('../assets/SVG/CarArrow_L.svg');
     /* left : -70px; */
 }
 
 /* Move next button to the right edge */
 .swiper-button-next {
-    background-image: url('../assets/Arrow_R.png');
+    background-image: url('../assets/SVG/CarArrow_R.svg');
     /* right : -10px !important; */
 }
 
