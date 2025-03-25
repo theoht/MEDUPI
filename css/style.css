@@ -41,36 +41,33 @@ h2 {
 /* ---------------- Header Styles ---------------- */
 
 .header {
-    background-color: #9bc7ec;
-    color: rgb(0, 0, 0);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    overflow: visible;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: height 1.5s ease;
-    height: 100vh;
-    z-index: 10;
-    /*box-shadow: 0px 0px 40px rgba(155, 199, 236, 1); /* Fully opaque shadow in #9BC7EC */
-    box-shadow: 0 0 0.8rem 0.8rem #9BC7EC
+  background-color: #9bc7ec;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: height 1.5s ease;
+  height: 100vh;
+  z-index: 10;
+  box-shadow: 0 0 0.8rem 0.8rem #9BC7EC;
 }
 
 .header-content {
-    font-family: "oso-serif-variable", sans-serif;
-    font-weight: 600;
-    /* font-stretch: 70%; */
-    /* letter-spacing: -0.025em; */
-    position: relative;
-    z-index: 2;
-    font-size: 2.8em;
-    padding: 20px;
-    transition: transform 1.5s ease;
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  transition: transform 1.5s ease;
 }
 
+.logo {
+  width: 180px;
+  height: auto;
+  transition: transform 1.5s ease;
+}
 
 /* ---------------- Main Content and Layout ---------------- */
 .content {

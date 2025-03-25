@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           // Remove bold and circle from previously selected link
           if (selectedLink) {
-            selectedLink.style.fontWeight = "normal";
+            selectedLink.style.fontWeight = "lighter";
             selectedLink.textContent = selectedLink.textContent.replace(" ●", "");
           }
 
