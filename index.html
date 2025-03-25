@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/updates_style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/pmr0alv.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.5/swiper-bundle.min.css" onerror="this.onerror=null;this.href='/libs/swiper/swiper-bundle.min.css';">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
 </head>
   <body>
     <header class="header">
@@ -48,16 +49,23 @@
             <p>Publications</p>
           </div>
           <div class="section-main">
-            <!-- Swiper Container -->
-            <div class ="swiper-parent">
-              <div class="swiper-container">
-                <div class="swiper-wrapper" id="swiper-wrapper">
-                
-                </div>
+            <div class="glide">
+              <!-- Slides Wrapper -->
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides" id="glide-wrapper">
+                  <!-- Slides will be dynamically inserted here -->
+                </ul>
               </div>
-              <!-- Navigation arrows -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+            
+              <!-- Navigation Arrows -->
+              <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                  <img src="assets/SVG/CarArrow_L.svg" alt="Previous">
+                </button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                  <img src="assets/SVG/CarArrow_R.svg" alt="Next">
+                </button>
+              </div>
             </div>
           </div>
           </section>
@@ -100,7 +108,7 @@
       <div id="footer-container"></div>
         </section>
     </main>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
     <script src="js/updates.js"></script> 
     <script src="js/script.js"></script>
   </body>

@@ -139,96 +139,99 @@ h2 {
     min-height: 600px;
 }
 
-.swiper-parent {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 60px;
-  }
-  
-.swiper-slide {
-    width: auto !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
+/* Carousel container */
+.glide {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: visible;
 }
 
-.swiper-container {
-  width: 100%;
-  max-width: clamp(600px, 80vw, 1400px); /* Scales between 600px and 1400px */
-  overflow: hidden;
-  z-index: 1;
-}  
+/* Each carousel slide */
+.glide__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-/* --- Carousel Item Container --- */
+/* Carousel item structure */
 .carousel-item {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
   text-decoration: none;
-  color: inherit;
-  user-select: none;
-}
-
-/* --- Image --- */
-.carousel-item img {
-  width: 100%;
-  max-width: clamp(150px, 25vw, 300px);
-  height: auto;
-  object-fit: cover;
-  margin: 0 auto;
-  display: block;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* --- Text Caption --- */
-.carousel-caption {
-  margin-top: 10px;
-  font-size: clamp(1rem, 1vw, 1.2rem); /* Responsive font size */
-  text-align: center;
-  color: #242424;
   width: 100%;
   max-width: 300px;
+  height: 400px; 
+  background: none;
+}
+
+/* Image wrapper ensures fixed size without distortion */
+.carousel-img-wrapper {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-    /* top: 50%;  */
-    /* transform: translateY(-50%);  */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 1;
-    background-color: transparent; /* Remove button background */
-    background-size: contain;      /* Fit the image nicely */
-    background-repeat: no-repeat;
-    background-position: center;
+/* Image fits inside the designated area */
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-/* Move prev button to the left edge */
-.swiper-button-prev {
-    background-image: url('../assets/SVG/CarArrow_L.svg');
-    /* left : -70px; */
+/* Caption stays at bottom */
+.carousel-caption {
+  width: 100%;
+  height: 20%;
+  font-size: 1.1rem;
+  font-family: "oso-serif-variable", sans-serif;
+  font-weight: normal;
+  text-align: center;
+  color: #000000;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
 }
 
-/* Move next button to the right edge */
-.swiper-button-next {
-    background-image: url('../assets/SVG/CarArrow_R.svg');
-    /* right : -10px !important; */
+/* Arrows */
+.glide__arrows {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  display: none;
+.glide__arrow {
+  background: none !important;
+  color: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.glide__arrow img {
+  width: 40px;
+  height: 40px;
+}
+
+.glide__arrow--left {
+  left: -40px !important;
+}
+
+.glide__arrow--right {
+  right: -40px !important;
 }
 
 .about {

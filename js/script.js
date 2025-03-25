@@ -1,80 +1,50 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const swiperWrapper = document.getElementById("swiper-wrapper");
+  const glideWrapper = document.getElementById("glide-wrapper");
 
   fetch("publications.json")
     .then((response) => response.json())
     .then((publications) => {
       publications.forEach((publication) => {
-        // Create the swiper-slide div
-        const swiperSlide = document.createElement("div");
-        swiperSlide.classList.add("swiper-slide");
+        const glideSlide = document.createElement("li");
+        glideSlide.classList.add("glide__slide");
 
-        // Create the link (<a>) element
         const link = document.createElement("a");
-        link.href = `/publications/${publication.id}`; // Using dynamic ID
+        link.href = `/publications/${publication.id}`;
         link.classList.add("carousel-item");
-        link.setAttribute("data-id", publication.id);
 
-        // Create the image (<img>) element
         const img = document.createElement("img");
-        img.src = publication.frontcover || "assets/default_cover.jpg"; // Use a default image if cover_photo is missing
+        img.src = publication.frontcover || "assets/default_cover.jpg";
         img.alt = "Book Cover";
 
-        // Create the caption (<div>) element
         const caption = document.createElement("div");
         caption.classList.add("carousel-caption");
         caption.textContent = publication.title;
 
-        // Assemble the elements
         link.appendChild(img);
         link.appendChild(caption);
-        swiperSlide.appendChild(link);
-        swiperWrapper.appendChild(swiperSlide);
+        glideSlide.appendChild(link);
+        glideWrapper.appendChild(glideSlide);
       });
 
-      // **Check if Swiper is available before initializing**
-      if (typeof Swiper !== "undefined") {
-        const swiper = new Swiper(".swiper-container", {
-          slidesPerView: "auto",
-          spaceBetween: 75,
-          loop: true,
-          centeredSlides: true,
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },breakpoints: {
-            // Default settings for larger screens
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 75,
-              centeredSlides: false,
-            },
-          },
-        });
-      } else {
-        console.error("Swiper failed to load.");
-      }
-
-      // Event listener for carousel items
-      const carouselItems = document.querySelectorAll(".carousel-item");
-      carouselItems.forEach((item) => {
-        item.addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent the default link behavior
-          const publicationId = item.getAttribute("data-id");
-          window.location.href = `publications.html?id=${publicationId}`; // Pass ID in URL
-        });
-      });
+      // Initialize Glide.js
+      new Glide(".glide", {
+        type: "carousel",
+        perView: window.innerWidth < 768 ? 1 : 3,
+        focusAt: "center",
+        gap: 50,
+        breakpoints: {
+          768: { perView: 1 }, // Mobile: show 1 item
+        },
+      }).mount();
     })
     .catch((error) => console.error("Error fetching publications:", error));
 
-  fetch("footer.html")
-      .then(response => response.text())
-      .then(data => document.getElementById("footer-container").innerHTML = data)
-      .catch(error => console.error("Error loading footer:", error));
 
+  });
 
  // Fetch and display latest post
- async function loadLatestPost() {
+
+async function loadLatestPost() {
   try {
       const response = await fetch("updates.json"); // Fetch the JSON file
       const data = await response.json();
@@ -111,6 +81,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 }
 
-document.addEventListener("DOMContentLoaded", loadLatestPost);
+async function fetchFooter(){
+  fetch("footer.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("footer-container").innerHTML = data)
+      .catch(error => console.error("Error loading footer:", error));
+}
 
-});
+document.addEventListener("DOMContentLoaded", loadLatestPost);
+document.addEventListener("DOMContentLoaded", fetchFooter);
