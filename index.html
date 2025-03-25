@@ -12,16 +12,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.5/swiper-bundle.min.css" onerror="this.onerror=null;this.href='/libs/swiper/swiper-bundle.min.css';">
 </head>
   <body>
+
     <header class="header">
       <div class="header-content">
         <img src="assets/SVG/medupi_logo.svg" alt="Medupi Logo" class="logo">
       </div>
     </header>
-    
 
     <main class="content">
       <div class="sections">
-        <!-- Updates Section -->
         <section class="updates section">
           <div class="section-sidebar"> 
             <a href="updates.html">Updates</a>
@@ -29,26 +28,19 @@
           <div class="section-main">
             <body class="updates-page">
               <div class="container" >    
-                  <!-- Column 2: Carousel + Copy -->
                   <div class="column2" id="latest-post">
-                      <div class="swiper-container">
-                          <div id="carouselWrapper" class="swiper-wrapper"></div>
-                          <div class="swiper-pagination"></div>
-                          <div class="swiper-button-next"></div>
-                          <div class="swiper-button-prev"></div>
-                      </div>
-                      
-                      <p id="carouselCaption"></p> <!-- Captions under carousel -->
-                      <div id="eventCopy"></div> <!-- Copy below captions -->
+                      <div class="image-container">
+                        <img id="fadeImage" src="" alt="Image" class="fade-image" />
+                        <p id="imageCaption" class="image-caption"></p>
+                    </div>
+                    <div id="eventCopy"></div> 
                   </div>
                  <img class="vert-divider" src="assets/svg/line_vert.svg">
-                  <!-- Column 3: Dates -->
                   <div class="column3">
                       <div id="Dates"></div>
                        
                   </div>
               </div>
-          </section>
           </div>
         </section>
         <!-- Publications Section -->

@@ -1,28 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const header = document.querySelector(".header");
-  const headerContent = document.querySelector(".header-content");
-  const content = document.querySelector(".content");
-  const minHeight = 80; // Final header height
-  const transitionDuration = 1500; // 1.5s
-
-  function shrinkHeader() {
-    // Ensure transitions are applied before changes
-    header.style.transition = `height ${transitionDuration}ms ease`;
-    headerContent.style.transition = `transform ${transitionDuration}ms ease`;
-
-    // Start shrinking
-    requestAnimationFrame(() => {
-      header.style.height = `${minHeight}px`;
-      content.style.marginTop = `${minHeight}px`;
-      headerContent.style.transform = `translateX(calc(-50vw + 120px))`;
-    });
-  }
-
-  // Delay before animation starts
-  setTimeout(shrinkHeader, 500);
-});
-
-document.addEventListener("DOMContentLoaded", function () {
   const swiperWrapper = document.getElementById("swiper-wrapper");
 
   fetch("publications.json")

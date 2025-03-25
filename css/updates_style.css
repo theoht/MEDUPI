@@ -1,9 +1,5 @@
 /* ---------------- UPDATES ---------------------------*/
 
-#Dates {
-    padding: 100px 0;
-  }
-  
   .event-data h3 {
     font-family: "oso-serif-variable", sans-serif;
     font-weight: 600;
@@ -25,62 +21,65 @@
   }
   
   .container {
-    display: flex;
-    width: 100vw; /* Full screen width */
-    height: 100vh; /* Full screen height */
-  }
-  
-  .column1 {
-    width: 25%;
-    background-color: #F5C3C0; /* Just for visibility */
-  }
-  
-  .column2 {
+    display: flex; /* Enable flexbox layout */
+    width: 100%; /* Ensure it takes the full width of the parent */
+    max-width: 1200px; /* Optional: Set a max width if needed */
+    box-sizing: border-box; /* Include padding in width */
+    justify-content: left;
+}
+
+.column2 {
     width: 50%;
     background-color: #F5C3C0;
+}
+
+.column2 h2{
+  font-size: clamp(1.5em,4vw,3em);
+}
+
+.vert-divider {
+    background-color: #F5C3C0;
+    width: 5%;
+    max-height:800px;
+}
+
+.column3 {
+    width: 30%; /* Ensure this is set correctly */
+    background-color: #F5C3C0;
     padding: 30px;
-  }
-  
-  #carouselContainer {
-    width: 100%;  /* Full width of .column2 */
-    height: auto;  /* Maintain aspect ratio */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .column2 .swiper-container {
-    width: 100%;
-    aspect-ratio: 16 / 9; /* Maintain 16:9 ratio */
-    overflow: hidden;
-    
-  }
-  
-  .column2 .swiper-wrapper {
-    display: flex;
-  }
-  
-  .column2 .swiper-slide {
-    flex: 0 0 100%;  /* Ensures each slide takes full width */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .column2 .swiper-slide img {
-    width: 100%;  /* Make image fill slide */
-    height: 100%;
-    object-fit: contain; /* Ensure full image fits without cropping */
-  }
-  
-  .column2 #carouselCaption {
-    font-style: italic;
-    text-align: center;
-  }
-  
-  .column2 .linebreak{
-    padding: 60px;
-  }
+}
+
+.image-container {
+  max-width: 1000px; /* Increase max width as needed */
+  max-height: 500px; /* Increase max height as needed */
+  width: 80vw; /* Set to a percentage of the viewport width */
+  height: 40vh; /* Set to a percentage of the viewport height */
+  overflow: hidden; /* Hide overflow */
+  position: relative; /* Position relative for absolute children */
+  margin: 0 auto; /* Center the container */
+  display: flex; /* Use flexbox to align items */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.fade-image {
+  width: 100%; /* Make the image fill the container width */
+  height: 100%; /* Make the image fill the container height */
+  object-fit: contain; /* Scale the image to fit without warping */
+  position: relative; /* Change to relative for stacking context */
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.2s ease; /* Fade transition */
+}
+
+.image-caption {
+  text-align: center;
+  font-style: italic;
+  margin-top: 10px; /* Space between image and caption */
+  opacity: 1; /* Ensure caption is visible */
+}
+
+
+
   
   .vert-divider {
     background-color: #F5C3C0;
@@ -107,6 +106,31 @@
     display: none;
   }
   
+  .image-container {
+    max-width: 800px;
+    max-height: 400px;
+    width: 20vw; /* 20% of viewport width */
+    height: 20vh; /* 20% of viewport height */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Position relative for absolute children */
+    margin: 0 auto; /* Center the container */
+  }
+
+  .fade-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container */
+    position: absolute; /* Position absolute for fading effect */
+    opacity: 0; /* Start hidden */
+    transition: opacity 1s ease; /* Fade transition */
+  }
+
+  .image-caption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px; /* Space between image and caption */
+  }
+
   /* Ensure events are structured like a table */
   .event-row {
     display: flex;

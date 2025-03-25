@@ -22,6 +22,7 @@ body {
   font-family: "neue-haas-unica", sans-serif;
   font-weight: 100;
   letter-spacing: -0.025em;
+  top: 0;
   /* font-size: 2.3rem;  */
   cursor: url('assets/mouse.png'), auto;
   background-color: #9bc7ec;
@@ -37,21 +38,16 @@ h2 {
   font-size: 2.8em;
   }
 
-
 /* ---------------- Header Styles ---------------- */
 
 .header {
   background-color: #9bc7ec;
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  transition: height 1.5s ease;
-  height: 100vh;
+  justify-content: left;
+  height: 80px;
+  width: 100%;
   z-index: 10;
   box-shadow: 0 0 0.8rem 0.8rem #9BC7EC;
 }
@@ -60,18 +56,17 @@ h2 {
   position: relative;
   z-index: 2;
   padding: 20px;
-  transition: transform 1.5s ease;
 }
 
 .logo {
-  width: 180px;
-  height: auto;
-  transition: transform 1.5s ease;
+  width: 135px;
+  height: 50px;
 }
 
 /* ---------------- Main Content and Layout ---------------- */
 .content {
-    margin-top: 100vh;
+    /* margin-top: 100vh; */
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
     min-height: calc(100vh - 120px);
@@ -142,8 +137,6 @@ h2 {
     text-align: left;
     align-items: flex-start;
 }
-
-
 
 .swiper-parent {
     position: relative;
