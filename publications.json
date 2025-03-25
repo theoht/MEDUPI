@@ -12,10 +12,10 @@
       "physical" : "Softcover, 165 x 230mm",
       "ISBN" : "978-8-867-49602-0" 
               },
-    "hero": "assets/MT/MT-Spread01.jpg",
-    "spread01": "assets/MT/MT-Spread02.jpg",
-    "spread02": "assets/MT/MT-Spread03.jpg",
-    "spread03": "assets/MT/MT-Spread04.jpg"
+    "spread01": "assets/MT/MT-Spread01.jpg",
+    "spread02": "assets/MT/MT-Spread02.jpg",
+    "spread03": "assets/MT/MT-Spread03.jpg",
+    "spread04": "assets/MT/MT-Spread04.jpg"
 
   },
   {
@@ -31,10 +31,10 @@
       "physical" : "Softcover, 140 x 210mm",
       "ISBN" : "978-8-867-49650-1" 
               },
-    "hero": "assets/MMM/MMM-Spread01.jpg",
-    "spread01": "assets/MMM/MMM-Spread02.jpg",
-    "spread02": "assets/MMM/MMM-Spread03.jpg",
-    "spread03": "assets/MMM/MMM-Spread04.jpg"
+    "spread01": "assets/MMM/MMM-Spread01.jpg",
+    "spread02": "assets/MMM/MMM-Spread02.jpg",
+    "spread03": "assets/MMM/MMM-Spread03.jpg",
+    "spread04": "assets/MMM/MMM-Spread04.jpg"
   },
     {
       "id": 3,
@@ -49,10 +49,10 @@
         "physical" : "Hardcover, 190 x 245mm",
         "ISBN" : "978-0-620-79882-2" 
                 },
-      "hero": "assets/WDS/WDS-Spread01.jpg",
-      "spread01": "assets/WDS/WDS-Spread02.jpg",
-      "spread02": "assets/WDS/WDS-Spread03.jpg",
-      "spread03": "assets/WDS/WDS-Spread04.jpg"
+      "spread01": "assets/WDS/WDS-Spread01.jpg",
+      "spread02": "assets/WDS/WDS-Spread02.jpg",
+      "spread03": "assets/WDS/WDS-Spread03.jpg",
+      "spread04": "assets/WDS/WDS-Spread04.jpg"
       
     },
   {
@@ -68,10 +68,10 @@
       "physical" : "Hardcover, 165 x 240mm",
       "ISBN" : "978-0-620-79786-3" 
               },
-    "hero": "assets/UWK/UWK-Spread01.jpg",
-    "spread01": "assets/UWK/UWK-Spread02.jpg",
-    "spread02": "assets/UWK/UWK-Spread03.jpg",
-    "spread03": "assets/UWK/UWK-Spread04.jpg"
+    "spread01": "assets/UWK/UWK-Spread01.jpg",
+    "spread02": "assets/UWK/UWK-Spread02.jpg",
+    "spread03": "assets/UWK/UWK-Spread03.jpg",
+    "spread04": "assets/UWK/UWK-Spread04.jpg"
   },
     {
     "id": 5,
@@ -86,8 +86,8 @@
       "physical" : "Softcover, 148 x 210mm",
       "ISBN" : "" 
               },
-    "hero": "assets/MA/MA-Spread01.jpg",
-    "spread01": "assets/MA/MA-Spread02.jpg"
+    "spread01": "assets/MA/MA-Spread01.jpg",
+    "spread02": "assets/MA/MA-Spread02.jpg"
     },
     {
     "id": 6,
@@ -102,10 +102,10 @@
       "physical" : "Softcover",
       "ISBN" : "" 
               },
-    "hero": "assets/AB/AB-Spread01.jpg",
-    "spread01": "assets/AB/AB-Spread02.jpg",
-    "spread02": "",
-    "spread03": ""
+    "spread01": "assets/AB/AB-Spread01.jpg",
+    "spread02": "assets/AB/AB-Spread02.jpg",
+    "spread03": "",
+    "spread04": ""
     },
     {
       "id": 7,
@@ -120,15 +120,15 @@
         "physical" : "Digital Publication",
         "ISBN" : "" 
                 },
-      "hero": "assets/VO/VO-Spread01.jpg",
-      "spread01": "assets/VO/VO-Spread02.jpg",
-      "spread02": "assets/VO/VO-Spread03.jpg",
-      "spread03": "assets/VO/VO-Spread04.jpg"
+      "spread01": "assets/VO/VO-Spread01.jpg",
+      "spread02": "assets/VO/VO-Spread02.jpg",
+      "spread03": "assets/VO/VO-Spread03.jpg",
+      "spread04": "assets/VO/VO-Spread04.jpg"
 
       },
       {
         "id": 8,
-        "title": "defunct context: Ambivalence to Important Work",
+        "title": "defunct context: \nAmbivalence to Important Work",
         "author": "George Mahashe",
         "frontcover": "assets/DC/DC-Frontcover.png",
         "content": "A monograph publication by George Mahashe. It explores the artist book and its assembly as a process of inscribing Mahashe’s archive of practice as a physical dreamscape. As a monograph publication, it emanates out of Mahashe’s practice over the last 15 years, focusing on his current project ‘Pavilion Prototype I and II’. These projects draw from his work as convenor of the Anthropology Museum at Wits University (2018-2019) and his occupation of Iziko Museums of South Africa’s Bertram House Parking lot (2021–).\n Contributions by Simnikiwe Buhlungu, MADEYOULOOK, Oluremi Onabanjo and Sumayya Vally.",
@@ -139,8 +139,8 @@
           "physical" : "Hardcover, 230x270mm",
           "ISBN" : "" 
                   },
-        "hero": "assets/DC/DC-Spread01.jpg",
-        "spread01": "assets/DC/DC-Spread02.jpg",
-        "spread02": "assets/DC/DC-Spread03.jpg"  
+        "spread01": "assets/DC/DC-Spread01.jpg",
+        "spread02": "assets/DC/DC-Spread02.jpg",
+        "spread03": "assets/DC/DC-Spread03.jpg"  
         }
 ]

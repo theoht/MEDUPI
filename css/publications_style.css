@@ -36,9 +36,15 @@ ul {
 }
 
 .text-h3 {
-  font-size: 1.75rem;
-  /* font-weight: normal; */
-  margin-bottom: var(--spacing);
+  font-family: "oso-serif-variable", sans-serif;
+  font-weight: 600;
+  font-stretch: 70%;
+  line-height: 90%;
+  position: relative;
+  z-index: 2;
+  font-size: 2em;
+  text-decoration: underline;
+  text-align: left;
 }
 
 /* Publications page header (always small) */
@@ -153,7 +159,9 @@ body.publications-page .menu a:hover {
 }
 
 .publications-list {
-  width: var(--sidebar-width);
+  
+  width: 20%;
+  /*width: var(--sidebar-width);*/
   height: 100%;
   background-color: var(--sidebar-bg);
   padding: var(--spacing);
@@ -161,7 +169,7 @@ body.publications-page .menu a:hover {
   padding-top: 50px;
   box-sizing: border-box;
   overflow-y: auto;
-  position: fixed;
+
 }
 
 /* Updated list item styles */
@@ -171,7 +179,7 @@ body.publications-page .menu a:hover {
 
 #publication-list li a {
   display: block;
-  padding: 2px;
+  padding: 11px;
   color: var(--primary-color);
   transition: all 0.3s ease;
 }
@@ -180,19 +188,19 @@ body.publications-page .menu a:hover {
   text-decoration: underline;
 }
 
+/* Divider */
 .divider {
-  width: var(--divider-width);
+  /*width: var(--divider-width);*/
   background-color: transparent;
-  position: relative;
+  height: 100%; /* Ensure it takes full height of parent */
+  display: flex;
+  justify-content: center; /* Centers the image in the divider */
 }
 
 .divider-img {
-  position: fixed;
-  top: 20vh;
-  left: var(--sidebar-width);
-  width: var(--divider-width);
-  height: auto;
-  z-index: 5;
+  width: 100%; /* Take full width of divider */
+  height: 100%; /* Take full height of parent divider */
+  object-fit: contain; /* Ensure the image fits properly */
 }
 
 /* ======================= */
@@ -235,13 +243,13 @@ body.publications-page .menu a:hover {
 .pub-title {
   font-family: "oso-serif-variable", sans-serif;
   font-weight: 600;
-  /* font-stretch: 70%; */
+  font-stretch: 70%;
   line-height: 90%;
   position: relative;
   z-index: 2;
   font-size: 2.8em;
   text-align: left;
-  margin: 20px 0 0;
+  margin: 50px 0 0;
 }
 
 .pub-author {
@@ -251,12 +259,13 @@ body.publications-page .menu a:hover {
   line-height: 90%;
   position: relative;
   z-index: 2;
-  font-size: 1.4rem;
   text-align: left;
   margin: 5px 0 10px;
 }
 
 .pub-content {
+  width: 90%;
+  margin: 50px 0;
   font-size: 1.1rem;
   line-height: 1.6;
   text-align: left;
@@ -265,17 +274,18 @@ body.publications-page .menu a:hover {
 
 /* Spread Images Section */
 .pub-spreads {
-  width: 85%;
+  margin: 50px 0 0 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
   /* align-items:center; */
-  gap: var(--spacing);
+  gap: 20px;
   /* box-sizing: border-box; */
 }
 
 /* Individual Spread Images */
 .pub-spread {
-  width: 85%;
+  width: 100%;
   max-width: 800px;
   height: auto;
   object-fit: contain;
@@ -285,45 +295,45 @@ body.publications-page .menu a:hover {
 
 /* Optional: If pub-spread contains img tags instead of being img tags */
 .pub-spread img {
-  width: 85%;
+  width: 100%;
   height: auto;
   object-fit: contain;
 }
 
 .pub-specs{
-  margin: 0;
+  margin: 50px 0;
   line-height: normal;
   text-align: left;
 }
 
 .publication-content img {
-  display: block;
-  margin: 0 auto; /* Centers image horizontally */
-  max-width: 70%; /* Ensures responsiveness */
   height: auto;
 }
 
 
+/* ======================= */
+/*      RESPONSIVE         */
+/* ======================= */
 @media (max-width: 768px) {
   .pub-wrapper {
-    flex-direction: column-reverse; /* Ensures publications-list appears below */
+    flex-direction: column-reverse;
     height: auto;
   }
 
   .publications-list {
-    width: 100%; /* Full width */
-    position: relative; /* No longer fixed */
-    height: auto; /* Let it expand naturally */
-    padding-top: 20px; /* Adjust spacing */
+    width: 100%;
+    position: relative;
+    height: auto;
+    padding-top: 20px;
   }
 
   .divider {
-    display: none; /* Hide the vertical divider */
+    display: none;
   }
 
   .publication-content {
     width: 100%;
-    max-width: 100%; /* Let it use full width */
-    padding: 15px; /* Adjust padding for better spacing */
+    max-width: 100%;
+    padding: 15px;
   }
 }

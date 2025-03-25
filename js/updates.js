@@ -68,6 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error("Error loading updates:", error));
 
+      
+
     document.getElementById("Dates").addEventListener("click", (event) => {
         let header = event.target.closest(".event-header");
         if (!header) return;
@@ -122,3 +124,30 @@ function getRandomArrow() {
     const randomVariant = variations[Math.floor(Math.random() * variations.length)];
     return `../assets/SVG/droparrow_${randomVariant}.svg`;
 }
+
+let images = [];
+let currentIndex = 0;
+const imageElement = document.getElementById("clickableImage");
+
+// Fetch JSON data and extract images
+fetch('images.json')
+    .then(response => response.json())
+    .then(data => {
+        if (data.updates && data.updates.length > 0 && data.updates[0].images) {
+            images = data.updates[0].images; // Extract images from first update
+            if (images.length > 0) {
+                imageElement.src = images[0]; // Set first image
+            }
+        }
+    })
+    .catch(error => console.error('Error loading images:', error));
+
+// Change image on click
+imageElement.addEventListener("click", function () {
+    if (images.length === 0) return; // Ensure images are loaded
+
+    currentIndex = (currentIndex + 1) % images.length; // Cycle through images
+    this.src = images[currentIndex];
+
+    
+});

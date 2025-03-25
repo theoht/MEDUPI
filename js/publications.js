@@ -23,7 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
       publications.forEach((publication) => {
         const link = document.createElement("a");
         link.href = `?id=${publication.id}`; // Ensure the publication ID is passed in the URL
-        link.textContent = publication.title;
+        link.innerHTML = publication.title + "<br>" + publication.author;
+        
         link.setAttribute("data-id", publication.id);
 
         const listItem = document.createElement("li");
@@ -33,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Highlight the publication if it matches the ID in the URL
         if (publicationIdFromURL && publicationIdFromURL == publication.id) {
           link.style.fontWeight = "bold";
-          link.textContent = publication.title + " ●"; // Add the circle to selected publication
+          link.innerHTML = publication.title + "<br>" + publication.author + " ●"; // Add the circle to selected publication
           selectedLink = link; // Mark this link as selected
 
           // Populate content immediately when the page loads
@@ -47,13 +48,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
           // Remove bold and circle from previously selected link
           if (selectedLink) {
-            selectedLink.style.fontWeight = "lighter";
-            selectedLink.textContent = selectedLink.textContent.replace(" ●", "");
+            selectedLink.style.fontWeight = "";
+            selectedLink.style.backgroundColor = "";
+            selectedLink.innerHTML = selectedLink.innerHTML.replace(" ●", "");
           }
 
           // Apply bold and append the circle to the clicked link
           link.style.fontWeight = "bold";
-          link.textContent = publication.title + " ●";
+          link.style.backgroundColor = "orange"; // Or any color you prefer
+          link.innerHTML= publication.title  + "<br>" + publication.author + " ●";
           selectedLink = link; // Update selected link
 
           const publicationId = event.target.getAttribute("data-id");
@@ -93,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Cover image
     const coverImg = document.createElement("img");
-    coverImg.src = publicationData.hero;
+    coverImg.src = publicationData.frontcover;
     coverImg.alt = `${publicationData.title} Front Cover`;
     coverImg.classList.add("pub-frontcover");
 
@@ -106,11 +109,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const specsElement = document.createElement("div");
     specsElement.classList.add("pub-specs");
     specsElement.innerHTML = `
-      <p><strong>Year:</strong> ${publicationData.specs.year}</p>
-      <p><strong>Language:</strong> ${publicationData.specs.language}</p>
-      <p><strong>Pages:</strong> ${publicationData.specs.pages}</p>
-      <p><strong>Physical:</strong> ${publicationData.specs.physical}</p>
-      <p><strong>ISBN:</strong> ${publicationData.specs.ISBN}</p>
+      <p>${publicationData.specs.year}</p>
+      <p>${publicationData.specs.language}</p>
+      <p>${publicationData.specs.pages}</p>
+      <p>${publicationData.specs.physical}</p>
+      <p>ISBN: ${publicationData.specs.ISBN}</p>
     `;
 
     // Spread images container
@@ -133,8 +136,8 @@ document.addEventListener("DOMContentLoaded", () => {
     mainContent.appendChild(titleElement);
     mainContent.appendChild(authorElement);
     mainContent.appendChild(contentElement);
-    mainContent.appendChild(specsElement);
     mainContent.appendChild(spreadsContainer);
+    mainContent.appendChild(specsElement);
 
     // Inject it into the page
     publicationContent.appendChild(mainContent);

@@ -38,11 +38,6 @@
 font-size: clamp(1.5em,4vw,3em);
 }
 
-.vert-divider {
-  background-color: #F5C3C0;
-  width: 5%;
-  max-height:800px;
-}
 
 .column3 {
   width: 30%; /* Ensure this is set correctly */
@@ -50,18 +45,9 @@ font-size: clamp(1.5em,4vw,3em);
   padding: 30px;
 }
 
-.image-container {
-max-width: 1000px; /* Increase max width as needed */
-max-height: 500px; /* Increase max height as needed */
-width: 80vw; /* Set to a percentage of the viewport width */
-height: 40vh; /* Set to a percentage of the viewport height */
-overflow: hidden; /* Hide overflow */
-position: relative; /* Position relative for absolute children */
-margin: 0 auto; /* Center the container */
-display: flex; /* Use flexbox to align items */
-flex-direction: column; /* Stack children vertically */
-align-items: center; /* Center items horizontally */
-}
+
+
+
 
 .fade-image {
 width: 100%; /* Make the image fill the container width */
@@ -85,7 +71,9 @@ opacity: 1; /* Ensure caption is visible */
 .vert-divider {
   background-color: #F5C3C0;
   padding: 50px 0;
+  margin: 0 0 0 60px;
   width: 5%;
+  max-height:800px;
 }
 
 .column3 {
@@ -110,11 +98,13 @@ opacity: 1; /* Ensure caption is visible */
 .image-container {
   max-width: 800px;
   max-height: 400px;
-  width: 20vw; /* 20% of viewport width */
-  height: 20vh; /* 20% of viewport height */
+  width: 100%;
   overflow: hidden; /* Hide overflow */
   position: relative; /* Position relative for absolute children */
   margin: 0 auto; /* Center the container */
+  display: flex; /* Use flexbox to align items */
+flex-direction: column; /* Stack children vertically */
+align-items: center; /* Center items horizontally */
 }
 
 .fade-image {
@@ -127,9 +117,9 @@ opacity: 1; /* Ensure caption is visible */
 }
 
 .image-caption {
-  text-align: center;
+  text-align: left;
   font-style: italic;
-  margin-top: 10px; /* Space between image and caption */
+  margin: 10px 0 30px 0; /* Space between image and caption */
 }
 
 /* Ensure events are structured like a table */
