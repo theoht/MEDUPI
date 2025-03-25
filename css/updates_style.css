@@ -22,6 +22,7 @@
   
   .container {
     display: flex; /* Enable flexbox layout */
+    flex-direction: row;
     width: 100%; /* Ensure it takes the full width of the parent */
     max-width: 1200px; /* Optional: Set a max width if needed */
     box-sizing: border-box; /* Include padding in width */
@@ -177,3 +178,21 @@
   .rotate {
     transform: rotate(180deg);
   }
+
+  @media (max-width: 768px) { /* Adjust the max-width as needed */
+    .container {
+        flex-direction: column; /* Stack columns vertically */
+    }
+
+    .vert-divider {
+        display: none; /* Hide the vertical divider */
+    }
+
+    .column2 {
+        width: 100%; /* Ensure column2 takes full width */
+    }
+
+    .column3 {
+        width: 100%; /* Ensure column3 takes full width */
+    }
+}
