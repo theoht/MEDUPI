@@ -161,6 +161,7 @@ body.publications-page .menu a:hover {
   padding-top: 50px;
   box-sizing: border-box;
   overflow-y: auto;
+  position: fixed;
 }
 
 /* Updated list item styles */
@@ -303,28 +304,26 @@ body.publications-page .menu a:hover {
 }
 
 
-/* ======================= */
-/*      RESPONSIVE         */
-/* ======================= */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .pub-wrapper {
-    flex-direction: column;
+    flex-direction: column-reverse; /* Ensures publications-list appears below */
+    height: auto;
   }
 
   .publications-list {
-    width: 100%;
-    height: auto;
-    border-right: none;
-    border-bottom: 1px solid #ccc;
-    order:0;
+    width: 100%; /* Full width */
+    position: relative; /* No longer fixed */
+    height: auto; /* Let it expand naturally */
+    padding-top: 20px; /* Adjust spacing */
   }
 
   .divider {
-    display: none;
+    display: none; /* Hide the vertical divider */
   }
 
   .publication-content {
     width: 100%;
-    order: -1;
+    max-width: 100%; /* Let it use full width */
+    padding: 15px; /* Adjust padding for better spacing */
   }
 }

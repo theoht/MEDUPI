@@ -79,8 +79,6 @@ async function loadLatestPost() {
               html += `<img src="${latestUpdate.images[0]}" alt="Latest update image" style="max-width:100%;">`;
           }
 
-          html += `<a href="updates.html">Read more</a>`;
-
           latestPostContainer.innerHTML = html;
       } else {
           document.getElementById("latest-post").innerHTML = "<p>No updates found.</p>";
