@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function getRandomArrow() {
     const variations = ["D01", "D02", "D03"]; // Add more if needed
     const randomVariant = variations[Math.floor(Math.random() * variations.length)];
-    return `../assets/SVG/droparrow_${randomVariant}.svg`;
+    return `assets/SVG/droparrow_${randomVariant}.svg`;
 }
 
 let images = [];
@@ -147,7 +147,5 @@ imageElement.addEventListener("click", function () {
     if (images.length === 0) return; // Ensure images are loaded
 
     currentIndex = (currentIndex + 1) % images.length; // Cycle through images
-    this.src = images[currentIndex];
-
-    
+    this.src = images[currentIndex];    
 });
