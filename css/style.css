@@ -23,7 +23,6 @@ body {
   font-weight: 100;
   letter-spacing: -0.025em;
   /* font-size: 2.3rem;  */
-  cursor: url('assets/mouse.png'), auto;
   background-color: #9bc7ec;
 }
 
@@ -99,10 +98,10 @@ h2 {
   position: relative;
   z-index: 2;
   font-size: 1.4em;
-      width: 20%;
-    display: flex;
-    padding: 10px;
-    box-sizing: border-box;
+  width: 20%;
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .section-main {
@@ -150,16 +149,7 @@ h2 {
     align-items: center;
     padding: 0 60px;
   }
-
-.swiper-container {
-    position: relative; 
-    width: 100%;
-    max-width: 1400px;
-    overflow: hidden;
-    z-index: 1;
-  }  
   
-/* --- Slide Content --- */
 .swiper-slide {
     width: auto !important;
     display: flex;
@@ -167,46 +157,46 @@ h2 {
     align-items: center;  
 }
 
+.swiper-container {
+  width: 100%;
+  max-width: clamp(600px, 80vw, 1400px); /* Scales between 600px and 1400px */
+  overflow: hidden;
+  z-index: 1;
+}  
+
 /* --- Carousel Item Container --- */
 .carousel-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 300px;
-    width: 100%;
-    text-decoration: none;
-    color: inherit;
-    user-select: none;
-    -webkit-user-drag: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  user-select: none;
 }
 
 /* --- Image --- */
 .carousel-item img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 6 / 9;
-    object-fit: cover;
-    max-width: 300px;
-    max-height: 450px;
-    margin: 0 auto;
-    display: block;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    /* border-radius: 8px; */
+  width: 100%;
+  max-width: clamp(150px, 25vw, 300px);
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* --- Text Caption --- */
 .carousel-caption {
-    margin-top: 10px;
-    font-size: 1rem;
-    text-align: center;
-    color: #333;
-    width: 100%;
-    max-width: 300px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  margin-top: 10px;
+  font-size: clamp(1rem, 1vw, 1.2rem); /* Responsive font size */
+  text-align: center;
+  color: #242424;
+  width: 100%;
+  max-width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .swiper-button-prev,

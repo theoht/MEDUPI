@@ -38,10 +38,17 @@ document.addEventListener("DOMContentLoaded", function () {
           slidesPerView: "auto",
           spaceBetween: 75,
           loop: true,
-          centeredSlides: false,
+          centeredSlides: true,
           navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
+          },breakpoints: {
+            // Default settings for larger screens
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 75,
+              centeredSlides: false,
+            },
           },
         });
       } else {
@@ -59,8 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     })
     .catch((error) => console.error("Error fetching publications:", error));
-
-
 
   fetch("footer.html")
       .then(response => response.text())
